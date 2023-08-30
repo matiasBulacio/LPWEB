@@ -1,18 +1,31 @@
-body{
-	color: rgb(53,193,71);
-	background-color: rgb(000,51,000);
+.rodapé{
+	font-family: "Roboto";
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
 }
-nav ul{
+img{
+    position: relative;
+    right: -800px;
+    width: 420px;
+    height: 420px;
+}
+.cabeçalho{
+    font-family: "Staatliches";
+    font-size:150%;
+}
+.content{
+    font-family: "Roboto";
+    text-align: center;
+    margin-inline-start: 285px;
+    margin-block-start: 0.83em;
+} 
+
+.menu{
 	display:flex;
-	justify-content: space-between;
-	padding:20px;
+	justify-content: space-around;
+	padding:5px;
 }
-nav ul li a{
-	color: rgb(53,193,71);
-}
-#Azul{
-	color: rgb(127, 13, 202);
-}
-.Vermelho{
-	color: rgb(250, 0, 21);
+a{
+    text-decoration: none;
 }
