@@ -1,68 +1,66 @@
 * {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
- }
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+}
  
- body {
-    height: 100%;
-    overflow: hidden;
- }
+body {
+   height: 100%;
+   overflow: hidden;
+}
   
- header {
-    background-color: #888888;
-    height: 75px;
-    top: 0;
-    width: 100%;
-
- }
+header {
+   background-color: #888888;
+   height: 75px;
+   top: 0;
+   width: 100%;
+}
  
- #menuItems {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    margin-right: 50px;
- }
- .menuItem {
-    margin-left: 15px;
- }
+#menuItems {
+   display: flex;
+   list-style: none;
+   justify-content: space-between;
+   margin-right: 50px;
+}
+.menuItem {
+   margin-left: 15px;
+}
  
- #logo a img {
-    width: 75px;
- }
+#logo a img {
+   width: 75px;
+}
  
- .button {
-    background-color: #128200;
-    border-radius: 25%;
-    height: 65%;
-    width: 130px;
- }
+.button {
+   background-color: #128200;
+   border-radius: 25%;
+   height: 65%;
+   width: 130px;
+}
  
- .button:hover {
-    background-color: #1cb404;
- }
+.button:hover {
+   background-color: #1cb404;
+}
  
- .selected {
-    background-color: #40AE2E;
- }
+.selected {
+   background-color: #40AE2E;
+}
  
- .button p {
-    text-align: center;
-    padding-top: 15px;
- }
+.button p {
+   text-align: center;
+   padding-top: 15px;
+}
  
- footer {
-    background-color: #888888;
-    bottom: 0;
-    height: 10vh;
-    margin-top: 7vh;
-    position: relative;
-    
- }
+footer {
+   background-color: #888888;
+   bottom: 0;
+   height: 10vh;
+   margin-top: 7vh;
+   position: relative;
+}
  
- footer p {
-    font-size: larger;
-    text-align: center;
-    text-decoration: solid;
-    vertical-align: middle;
- }
+footer p {
+   font-size: larger;
+   text-align: center;
+   text-decoration: solid;
+   vertical-align: middle;
+}
