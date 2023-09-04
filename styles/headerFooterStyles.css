@@ -50,9 +50,9 @@ header {
    padding-top: 15px;
 }
  
-footer {
+#footer {
    background-color: #888888;
-   bottom: 0;
+   bottom: 0.5vh;
    height: 10vh;
    margin-top: 3.5vh;
    position: relative;
