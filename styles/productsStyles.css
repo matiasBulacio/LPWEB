@@ -56,8 +56,11 @@ h1 {
    background-color: rgb(236, 236, 236);
    border-radius: 5%;
    left: 15vw;
+   border-top-right-radius: 0%;
    position: relative;
-   top: 10%;
+   top: 1%;
+   overflow-y: scroll;
+   overflow-x: hidden;
    width: 72vw;
 }
 

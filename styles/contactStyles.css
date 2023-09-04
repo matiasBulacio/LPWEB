@@ -95,3 +95,8 @@ textarea {
    position: relative;
    width: 50%;
 }
+
+h1 {
+  position: relative;
+  top: 7px;
+}

@@ -1,3 +1,9 @@
+
+* {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
 .image{
     position: relative;
     right: -800px;
@@ -12,7 +18,7 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
-.half-circle {
+.halfCircle {
     position: absolute;
     bottom: -90px;
     right: -100px;
@@ -30,14 +36,14 @@
     color: black;
     font-size: 19px;
 }
-.content-text{
+.contentText{
     margin-top: 0px;
     margin-right: 720px;
     text-align: center;
     padding-left: 40px;
     padding-top: 0px;
 }
-.content-title{
+.contentTitle{
     margin-top: 0px;
     margin-right: 720px;
     text-align: center;
@@ -52,72 +58,8 @@
     height: 100%;
 }
 
-* {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
- }
-  
- body {
-    height: 100%;
-    overflow: hidden;
- }
-   
- header {
-    background-color: #888888;
-    height: 75px;
-    top: 0;
-    width: 100%;
- }
-  
- #menuItems {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    margin-right: 50px;
- }
- .menuItem {
-    margin-left: 15px;
- }
-  
- #logo a img {
-    width: 75px;
- }
-  
- .button {
-    background-color: #128200;
-    border-radius: 25%;
-    height: 65%;
-    width: 130px;
- }
-  
- .button:hover {
-    background-color: #1cb404;
- }
-  
- .selected {
-    background-color: #40AE2E;
- }
-  
- .button p {
-    text-align: center;
-    padding-top: 15px;
- }
-  
- footer {
-    background-color: #888888;
-    height: 10vh;
-    margin-top: 28vh;
-    position: relative;
-    font-family: "Roboto";
-    padding: 10px;
-    font-size: 20px;
-    bottom: 280px;
- }
  .main{
     position: relative;
     top: 130px;
  }
   
-
-
