@@ -1,0 +1,31 @@
+.rodapé{
+	font-family: "Roboto";
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+img{
+    position: relative;
+    right: -800px;
+    width: 420px;
+    height: 420px;
+}
+.cabeçalho{
+    font-family: "Staatliches";
+    font-size:150%;
+}
+.content{
+    font-family: "Roboto";
+    text-align: center;
+    margin-inline-start: 285px;
+    margin-block-start: 0.83em;
+} 
+
+.menu{
+	display:flex;
+	justify-content: space-around;
+	padding:5px;
+}
+a{
+    text-decoration: none;
+}
