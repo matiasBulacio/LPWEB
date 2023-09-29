@@ -1,6 +1,5 @@
 
 * {
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
@@ -24,18 +23,11 @@
   right: -100px;
   width: 650px;
   height: 650px;
-  background-color: #FF7777;
+  background-color: #9191a1;
   border-radius: 1000px 1000px 1000px 1000px;
   z-index: -1;
 }
-.menu, a{
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-	display:flex;
-	justify-content: space-around;
-  text-decoration: none;
-  color: black;
-  font-size: 19px;
-}
+
 .contentText{
   margin-top: 0px;
   margin-right: 50%;

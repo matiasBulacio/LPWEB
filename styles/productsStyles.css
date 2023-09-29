@@ -1,12 +1,6 @@
 * {
-   color: black;
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
-}
- 
-body {
-   height: 100%;
-   overflow: hidden;
 }
  
  
@@ -17,7 +11,7 @@ section {
 }
  
 .background {
-   background-color: #FF7777;
+   background-color: #9095aa;
    border-radius: 100%;
    display: flex;
    flex-direction: column;
@@ -25,7 +19,7 @@ section {
    position: absolute;
    right: -200px;
    width: 500px;
-   z-index: 0;
+   z-index: -1;
 }
  
 .contactBackground a {
@@ -36,7 +30,7 @@ section {
 }
  
 .background2 {
-   background-color: #FF7777;
+   background-color: #000020;
    border-radius: 100%;
    height: 500px;
    margin: 400px 0px 0px -200px;
@@ -46,7 +40,7 @@ section {
 }
 
 h1 {
-   margin-top: 80px;
+   position: relative;
    text-align: center;
    text-decoration: solid;
    vertical-align: middle;
@@ -58,7 +52,7 @@ h1 {
    left: 15vw;
    border-top-right-radius: 0%;
    position: relative;
-   top: 1%;
+   top: 1vh;
    overflow-y: scroll;
    overflow-x: hidden;
    width: 72vw;
