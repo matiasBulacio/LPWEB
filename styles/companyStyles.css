@@ -54,13 +54,3 @@
   position: relative;
   top: 14px;
 }
-
-footer {
-  background-color: #888888;
-  bottom: 0;
-  height: 10vh;
-  margin-top: 3.5vh;
-  position: absolute;
-  width: 100vw;
-  bottom: 0;
-}
