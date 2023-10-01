@@ -60,6 +60,10 @@ header {
       background-color: rgb(255,87,56);
       height: 68%;
       width: 30vw;
+      box-shadow: 0 0 10px rgb(255,87,56), 
+      0 0 30px rgb(253, 78, 47), 
+      0 0 50px rgb(255, 74, 43), 
+      0 0 70px rgb(255, 56, 21);
    }
 }
 

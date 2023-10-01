@@ -12,20 +12,18 @@
 }
 .content {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding: 0px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-self: center;
+  position: relative;
+  left: 10vw;
+  top: 10vh
 }
-.halfCircle {
-  position: absolute;
-  bottom: -90px;
-  right: -100px;
-  width: 650px;
-  height: 650px;
-  background-color: #9191a1;
-  border-radius: 1000px 1000px 1000px 1000px;
-  z-index: -1;
+.content #logoContent {
+  position: relative;
+  left: 25%;
+  border-radius: 20px;
 }
 
 .contentText{
@@ -40,17 +38,108 @@
   margin-right: 50%;
   text-align: center;
   padding-left: 60px;
-  padding-top: 130px;
-}
-.body{
-  position: fixed;
-  margin: 0px;
-  overflow-y: hidden;
-  overflow-X: hidden;
-  height: 100%;
+  padding-top: 25px;
 }
 
 .main{
   position: relative;
   top: 14px;
+}
+.halfCircle {
+  position: absolute;
+  bottom: -90px;
+  box-shadow: 0 0 10px #000040,
+  0 0 30px #0000a0,
+  0 0 70px orangered;
+  right: -100px;
+  width: 650px;
+  height: 650px;
+  background-color: #9191a1;
+  border-radius: 1000px 1000px 1000px 1000px;
+  z-index: -1;
+}
+
+@media screen and (max-height: 650px){
+  .content {
+    position: relative;
+    top: -20px
+  }
+  .contentTitle {
+    position: relative;
+    top: -20px
+  }
+  .contentText {
+    position: relative;
+    top: -20px
+  }
+  .image {
+    position: relative;
+    top: -395px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .image{
+    position: relative;
+    right: -10%;
+    top: -0;
+    width: 420px;
+    height: 420px;
+  }
+  .content {
+    position: relative;
+    top: -10px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 15px;
+    box-shadow: 0 0 10px #9191a1,
+      0 0 20px #9191a1,
+      0 0 40px #9191a1,
+      0 0 60px #fff;
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 5.5%;
+    width: 90vw;
+    
+  }
+  .content #logoContent {
+    position: relative;
+    left: 37%;
+    border-radius: 20px;
+  }
+  .contentTitle {
+    position: relative;
+    top: -20px;
+    margin-top: 0px;
+    margin-right: 0%;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 25px;
+  }
+  .contentText {
+    position: relative;
+    top: -20px;
+    margin-top: 0px;
+    margin-right: 0%;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  .content #logoContent {
+    left: 25%;
+  }
+  .contentText {
+    left: 15%;
+    height: 150px;
+    width: 75%;
+    position: relative;
+  }
+  .image {
+    width: 320px;
+    height: 320px;
+    top: 25px;
+  }
 }
