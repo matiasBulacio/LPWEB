@@ -1,12 +1,6 @@
 * {
-   color: black;
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
-}
- 
-body {
-   height: 100%;
-   overflow: hidden;
 }
  
  
@@ -17,27 +11,24 @@ section {
 }
  
 .background {
-   background-color: #FF7777;
+   background-color: #9095aa;
    border-radius: 100%;
+   box-shadow: 0 0 10px #000040,
+      0 0 30px #0000a0;
    display: flex;
    flex-direction: column;
    height: 500px;
    position: absolute;
    right: -200px;
    width: 500px;
-   z-index: 0;
+   z-index: -1;
 }
- 
-.contactBackground a {
-   left: 55%;
-   margin-bottom: 10px;
-   top: 33%;
-   position: relative;
-}
- 
+
 .background2 {
-   background-color: #FF7777;
+   background-color: #000020;
    border-radius: 100%;
+   box-shadow: 0 0 10px #000040,
+      0 0 30px #0000a0;
    height: 500px;
    margin: 400px 0px 0px -200px;
    position: absolute;
@@ -46,22 +37,22 @@ section {
 }
 
 h1 {
-   margin-top: 80px;
+   position: relative;
    text-align: center;
    text-decoration: solid;
    vertical-align: middle;
 }
 
 #productList {
-   background-color: rgb(236, 236, 236);
+   background-color: rgba(236, 236, 236, 0.1);
    border-radius: 5%;
-   left: 15vw;
+   height: 110vh;
    border-top-right-radius: 0%;
    position: relative;
-   top: 1%;
+   top: 1vh;
+   left: 1vw;
    overflow-y: scroll;
-   overflow-x: hidden;
-   width: 72vw;
+   width: 98vw; 
 }
 
 .products {

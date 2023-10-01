@@ -1,61 +1,110 @@
 * {
-   color: black;
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
 }
- 
-body {
+
+body{
+   margin: 0px;
+   overflow-y: hidden;
+   overflow-X: hidden;
    height: 100%;
-   overflow: hidden;
-}
+ }
   
 header {
-   background-color: #888888;
-   height: 75px;
-   top: 0;
-   width: 100%;
+   background-color: #112;
+   border-top-right-radius: 15%;
+   border-bottom-left-radius: 15%;
 }
- 
+
 #menuItems {
    display: flex;
    list-style: none;
-   justify-content: space-between;
-   margin-right: 50px;
+   position: relative;
+   left: 1.4vw;
 }
 .menuItem {
-   margin-left: 15px;
+   border-right: black solid .5px;
 }
  
 #logo a img {
    width: 75px;
+   border-radius: 25%;
 }
  
 .button {
-   background-color: #128200;
-   border-radius: 25%;
+   background-color: white;
    height: 65%;
-   width: 130px;
+   width: 25vw;
+   color: black;
 }
  
 .button:hover {
-   background-color: #1cb404;
+   animation: btnHover 1s forwards;
 }
  
 .selected {
-   background-color: #40AE2E;
+   background-color: #c4c4c4;
 }
  
 .button p {
    text-align: center;
    padding-top: 15px;
 }
+
+@keyframes btnHover {
+   0% {
+      background-color: white;
+      height: 65%;
+      width: 25vw;
+   } 100% {
+      background-color: rgb(255,87,56);
+      height: 68%;
+      width: 30vw;
+      box-shadow: 0 0 10px rgb(255,87,56), 
+      0 0 30px rgb(253, 78, 47), 
+      0 0 50px rgb(255, 74, 43), 
+      0 0 70px rgb(255, 56, 21);
+   }
+}
+
+@media screen and (width <= 550px) {
+   .button {
+      width: 20vw;
+   }
+   .button:hover {
+      animation: none;
+      background-color: rgb(255,87,56);
+   }
+}
+
+@media screen and (550px < width < 680px) {
+
+   @keyframes btnHover {
+      0% {
+         background-color: white;
+         height: 65%;
+         width: 25vw;
+      } 100% {
+         background-color: rgb(255,87,56);
+         height: 68%;
+         width: 25.8vw;
+      }
+   }
+}
+
+@media screen and (height <= 765px){
+
+   footer {
+      position: relative;
+   }
+}
  
-#footer {
-   background-color: #888888;
-   bottom: 0.5vh;
-   height: 10vh;
-   margin-top: 3.5vh;
-   position: relative;
+footer {
+   bottom: 0;
+   width: 100vw;
+   position: absolute;
+   text-align: center;
+   vertical-align: middle;
 }
  
 footer p {
@@ -63,4 +112,5 @@ footer p {
    text-align: center;
    text-decoration: solid;
    vertical-align: middle;
+   background-color: RGBA(100, 100, 100, 0.05);
 }

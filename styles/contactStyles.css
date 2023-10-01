@@ -1,13 +1,14 @@
 * {
-   color: black;
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
 }
 
-body {
+body{
+   margin: 0px;
+   overflow-y: hidden;
+   overflow-X: hidden;
    height: 100%;
-   overflow: hidden;
-}
+ }
  
 
 section {
@@ -17,37 +18,40 @@ section {
 }
 
 .contactBackground {
-   background-color: #FF7777;
+   background-color: #7a7a85;
    border-radius: 100%;
-   bottom: -100px;
+   top: 5vh;
    display: flex;
    flex-direction: column;
-   height: 500px;
+   align-items: start;
+   height: 30vw;
    position: absolute;
-   right: -150px;
-   width: 500px;
-   z-index: 0;
+   right: -8vw;
+   width: 30vw;
+   box-shadow: 0 0 10px gray,
+   0 0 20px gray,
+   0 0 30px gray,
+   0 0 40px gray,
+   0 0 80px gray;
+   z-index: -1;
 }
+
 
 .contactBackground a {
    left: 55%;
    margin-bottom: 10px;
-   top: 33%;
-   position: relative;
-}
-
-#twitter {
-   left: 265px;
+   top: 25%;
    position: relative;
 }
 
 .contactBackground2 {
-   background-color: #FF7777;
+   background-color: #6f6b7d;
    border-radius: 100%;
    height: 500px;
    margin: 100px 0px 0px -200px;
    position: absolute;
    width: 500px;
+   box-shadow: 0 0 10px gray;
    z-index: 0;
 }
 
@@ -55,36 +59,44 @@ section {
 .contact {
    display: flex;
    flex-direction: column;
-   left: 36%;
+   left: 33vw;
    position: absolute;
-   top: 10%;
-   width: 50%;
+   top: 19vh;
+   justify-content: center;
+   align-items: center;
+   background-color: #d1d1eb;
+   border: #00f solid .5px;
+   border-radius: 100px;
+   height: 70vh;
+   box-shadow: 2px 2px red, 
+      -2px -2px red,
+      0 0 10px #002,
+      0 0 20px #002,
+      0 0 30px #002;
+   width: 35vw;
+   
 }
 
 .form {
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
    position: relative;
-   width: 25vw;
 }
 
-input, textarea {
-   border-radius: 5%;
-   margin-left: 15px;
+.form label {
+   background-color: rgba(0,0,0, 0.05);
+   border-radius: 5px;
 }
+
+
 
 input:focus, textarea:focus {
-   border-color: #FF7777;
+   border-color: #016fff;
    outline: 0;
 }
 
-#email {
-   margin-left: 33px;
-}
-
-#name {
-   margin-left: 29px;
-}
 
 textarea {
    width: 250px;
@@ -94,9 +106,106 @@ textarea {
    margin-top: 15px;
    position: relative;
    width: 50%;
+   border-radius: 10px;
+   background-color: rgb(0, 0, 76);
+   color: white;
+   border: 2px solid white;
+}
+
+.submit:hover {
+   animation: submitAnimation 1s forwards;
+}
+
+@keyframes submitAnimation {
+
+   0% {
+      width: 50%;
+   } 100% {
+      width: 56%;
+      background-color: rgb(255,87,56);
+      box-shadow: 0 0 10px red, 
+      0 0 30px red, 
+      0 0 50px red, 
+      0 0 70px red;
+   }
 }
 
 h1 {
   position: relative;
   top: 7px;
+}
+
+@media screen and (height <= 600px){
+   #message {
+      height: 25vh;
+   }
+   .contact {
+      height: 350px;
+   }
+}
+@media screen and (height > 780px){
+   .form label {
+      margin-top: 4.8vh;
+   }
+   input {
+      height: 2.4vh;
+      border-radius: 10px;
+   }
+   input, textarea {
+      width: 25vw;
+   }
+}
+
+@media screen and (max-width: 805px) {
+   .contactBackground {
+      right: -60px;
+      top: 40px;
+      width: 250px;
+      height: 250px;
+   }
+
+   .contactBackground a {
+      position: relative;
+      left: 120px;
+      top: 60px;
+   }
+
+}
+
+@media screen and (max-width: 910px) {
+   label {
+      text-align: center;
+      vertical-align: middle;  
+      width: 75%;
+   }
+
+   input {
+      width: 100%;
+   }
+
+   #message {
+      width: 50vw;
+   }
+
+   .contact {
+      border-radius: 25px;
+      width: 60vw;
+      position: absolute;
+      left: 60px;
+   }
+}
+
+@media screen and (min-width: 910px) {
+   input, textarea {
+      border-radius: 5%;
+      margin-left: 15px;
+   }
+
+   #email {
+      margin-left: 33px;
+   }
+
+   #name {
+      margin-left: 29px;
+   }
 }
