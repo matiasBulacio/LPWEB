@@ -6,6 +6,7 @@ section {
   display: flex;
   justify-content: space-between;
   position: relative;
+  color: white;
   width: 95vw;
   right: -2vw;
   overflow-y: scroll;
@@ -17,6 +18,7 @@ section {
   width: 30vw;
   height: 70vh;
   text-align: center;
+  color: white;
   box-shadow: 0 0 10px cadetblue,
     0 0 30px cadetblue,
     0 0 50px cadetblue;
