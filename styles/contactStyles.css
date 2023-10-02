@@ -1,22 +1,25 @@
+/* Define a fonte padrão para todo o conteúdo e remove sublinhado de links */
 * {
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
 }
 
+/* Define margens e oculta barras de rolagem horizontal e vertical */
 body{
    margin: 0px;
    overflow-y: hidden;
-   overflow-X: hidden;
+   overflow-x: hidden;
    height: 100%;
- }
- 
+}
 
+/* Define a aparência da seção principal da página */
 section {
    display: flex;
    flex-direction: column;
    height: 78vh;
 }
 
+/* Estilos para o fundo com ícones de redes sociais */
 .contactBackground {
    background-color: #7a7a85;
    border-radius: 100%;
@@ -36,7 +39,7 @@ section {
    z-index: -1;
 }
 
-
+/* Estilos para os ícones de redes sociais */
 .contactBackground a {
    left: 55%;
    margin-bottom: 10px;
@@ -44,6 +47,7 @@ section {
    position: relative;
 }
 
+/* Estilos para o fundo circular secundário */
 .contactBackground2 {
    background-color: #6f6b7d;
    border-radius: 100%;
@@ -55,7 +59,7 @@ section {
    z-index: 0;
 }
 
-
+/* Estilos para a seção de contato */
 .contact {
    display: flex;
    flex-direction: column;
@@ -74,9 +78,9 @@ section {
       0 0 20px #002,
       0 0 30px #002;
    width: 35vw;
-   
 }
 
+/* Estilos para o formulário de contato */
 .form {
    display: flex;
    flex-direction: column;
@@ -85,23 +89,24 @@ section {
    position: relative;
 }
 
+/* Estilos para as etiquetas do formulário */
 .form label {
    background-color: rgba(0,0,0, 0.05);
    border-radius: 5px;
 }
 
-
-
+/* Estilos para campos de entrada de texto quando em foco */
 input:focus, textarea:focus {
    border-color: #016fff;
    outline: 0;
 }
 
-
+/* Estilos para a área de texto */
 textarea {
    width: 250px;
 }
 
+/* Estilos para o botão de envio */
 .submit {
    margin-top: 15px;
    position: relative;
@@ -112,15 +117,17 @@ textarea {
    border: 2px solid white;
 }
 
+/* Estilos para o botão de envio ao passar o mouse */
 .submit:hover {
    animation: submitAnimation 1s forwards;
 }
 
+/* Animação para o botão de envio */
 @keyframes submitAnimation {
-
    0% {
       width: 50%;
-   } 100% {
+   } 
+   100% {
       width: 56%;
       background-color: rgb(255,87,56);
       box-shadow: 0 0 10px red, 
@@ -130,11 +137,13 @@ textarea {
    }
 }
 
+/* Estilos para o cabeçalho h1 */
 h1 {
   position: relative;
   top: 7px;
 }
 
+/* Estilos para telas com altura máxima de 600px */
 @media screen and (height <= 600px){
    #message {
       height: 25vh;
@@ -143,6 +152,8 @@ h1 {
       height: 350px;
    }
 }
+
+/* Estilos para telas com altura maior que 780px */
 @media screen and (height > 780px){
    .form label {
       margin-top: 4.8vh;
@@ -156,6 +167,7 @@ h1 {
    }
 }
 
+/* Estilos para telas com largura máxima de 805px */
 @media screen and (max-width: 805px) {
    .contactBackground {
       right: -60px;
@@ -169,9 +181,9 @@ h1 {
       left: 120px;
       top: 60px;
    }
-
 }
 
+/* Estilos para telas com largura máxima de 910px */
 @media screen and (max-width: 910px) {
    label {
       text-align: center;
@@ -195,6 +207,7 @@ h1 {
    }
 }
 
+/* Estilos para telas com largura mínima de 910px */
 @media screen and (min-width: 910px) {
    input, textarea {
       border-radius: 5%;
@@ -207,5 +220,19 @@ h1 {
 
    #name {
       margin-left: 29px;
+   }
+}
+
+/* Estilos para telas com largura máxima de 678px */
+@media screen and (max-width: 678px) {
+   /* Adicionei esta regra para ajustar o cabeçalho em telas menores */
+   #menuItems {
+     flex-wrap: wrap;
+     justify-content: flex-start; /* Alinhe os itens à esquerda em telas menores */
+   }
+ 
+   .menuItem {
+     width: 100%; /* Os itens ocuparão a largura total da tela em telas menores */
+     margin-bottom: 10px;
    }
 }
