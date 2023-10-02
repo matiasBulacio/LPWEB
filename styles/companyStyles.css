@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 section {
   display: flex;
   justify-content: space-between;
@@ -5,7 +9,7 @@ section {
   width: 95vw;
   right: -2vw;
   overflow-y: scroll;
-  height: 75vh;
+  overflow-x: hidden;
 }
 
 .companyCard {
@@ -20,11 +24,24 @@ section {
 
 @media screen and (max-width: 610px){
   section {
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .companyCard {
-    height: 25vh;
+    width: 75vw;
+    height: 20vh;
+    margin-top: 25px;
+    margin-left: 10.5vw;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  section {
+    height: 60vh;
+  }
+  .companyCard {
+
   }
 }
