@@ -1,39 +1,81 @@
-/* Estilização para os elementos com a classe .product (os produtos) */
-.product {
-   background-color: rgba(236, 236, 236, 0.1); /* Define a cor de fundo com transparência */
-   border-radius: 5%; /* Arredonda as bordas dos produtos */
-   margin: 0 10px 20px 0; 
-   padding: 20px; 
-   text-align: center;
-   width: calc(50% - 10px); /* Define a largura dos produtos para ocupar metade da largura do contêiner pai com um espaço entre eles */
-   box-sizing: border-box; /* Garante que a largura definida inclua preenchimento e borda */
-   float: left; /* Faz com que os produtos flutuem para a esquerda, permitindo que dois deles se alinhem horizontalmente */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
-/* Estilização para as imagens dentro dos elementos .product */
-.product img {
-   width: 50%; 
-   max-width: 50%; 
-   height: auto; /* Mantém a proporção original da imagem, ajustando automaticamente a altura */
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 78vh;
 }
 
-/* Estilização para os títulos dos produtos */
-.product h2 {
-   margin-top: 10px; 
-   font-size: 20px;
+.background {
+  background-color: #9095aa;
+  border-radius: 100%;
+  box-shadow: 0 0 10px #000040,
+     0 0 30px #0000a0;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  position: absolute;
+  right: -200px;
+  width: 500px;
+  z-index: -1;
 }
 
-/* Estilização para os parágrafos dentro dos produtos */
-.product p {
-   margin: 5px 0; 
-   font-size: 16px; 
+.background2 {
+  background-color: #000020;
+  border-radius: 100%;
+  box-shadow: 0 0 10px #000040,
+     0 0 30px #0000a0;
+  height: 500px;
+  margin: 400px 0px 0px -200px;
+  position: absolute;
+  width: 500px;
+  z-index: 0;
 }
 
-/* Estilização para o contêiner #productList que envolve os produtos */
+h1 {
+  position: relative;
+  text-align: center;
+  text-decoration: solid;
+  vertical-align: middle;
+}
+
 #productList {
-   display: flex; 
-   flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha quando não houver espaço horizontal suficiente */
-   justify-content: flex-start; /* Alinha os produtos à esquerda dentro do contêiner pai */
-   margin: 0 -10px; 
-   padding: 20px; 
+  background-color: rgba(236, 236, 236, 0.1);
+  border-radius: 5%;
+  height: 60vh;
+  border-top-right-radius: 0%;
+  position: relative;
+  top: 1vh;
+  left: 1vw;
+  overflow-y: scroll;
+  width: 98vw; 
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-right: 20px;
+  position: relative;
+}
+
+.products li {
+ background-color: rgba(0, 0, 0, 1);
+ color: white;
+ border-radius: 10px;
+ box-shadow: 0 0 10px black,
+ 0 0 30px black;
+ text-align: center;
+ margin-right: 10px;
+ margin-top: 10px;
+}
+
+.products li img {
+ width: 200px;
+ height: 200px;
 }
