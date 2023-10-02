@@ -46,7 +46,7 @@ h1 {
 #productList {
    background-color: rgba(236, 236, 236, 0.1);
    border-radius: 5%;
-   height: 110vh;
+   height: 60vh;
    border-top-right-radius: 0%;
    position: relative;
    top: 1vh;
@@ -62,4 +62,20 @@ h1 {
    justify-content: space-between;
    margin-right: 20px;
    position: relative;
+}
+
+.products li {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black,
+  0 0 30px black;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.products li img {
+  width: 200px;
+  height: 200px;
 }
