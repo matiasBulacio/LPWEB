@@ -1,47 +1,219 @@
-body {
-  overflow: hidden;
+/* Define a fonte padrão para todo o documento e remove decoração de texto */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
-section {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  width: 95vw;
-  right: -2vw;
-  overflow-y: scroll;
+/* Define margem zero e oculta a barra de rolagem vertical e horizontal */
+body {
+  margin: 0;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
-.companyCard {
-  background-color: rgb(116, 116, 136);
-  width: 30vw;
-  height: 70vh;
+/* Estilos para a imagem */
+.image {
+  position: relative;
+  right: -55%; /* Move a imagem para a direita */
+  top: -308px; /* Move a imagem para cima */
+  width: 420px;
+  height: 420px;
+}
+
+/* Estilos para o conteúdo da empresa */
+.content {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  left: 10vw; /* Move o conteúdo para a esquerda */
+  top: 10vh; /* Move o conteúdo para cima */
+}
+
+/* Estilos para o logotipo no conteúdo */
+.content #logoContent {
+  position: relative;
+  left: 25%;
+  border-radius: 20px;
+}
+
+/* Estilos para o texto do conteúdo */
+.contentText {
+  margin-top: 0px;
+  margin-right: 50%;
   text-align: center;
-  box-shadow: 0 0 10px cadetblue,
-    0 0 30px cadetblue,
-    0 0 50px cadetblue;
-} 
+  padding-left: 40px;
+  padding-top: 0px;
+}
 
-@media screen and (max-width: 610px){
-  section {
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
+/* Estilos para o título do conteúdo */
+.contentTitle {
+  margin-top: 0px;
+  margin-right: 50%;
+  text-align: center;
+  padding-left: 60px;
+  padding-top: 25px;
+}
+
+/* Estilos para a forma de meia-lua no fundo */
+.halfCircle {
+  position: absolute;
+  bottom: -90px;
+  box-shadow: 0 0 10px #000040, 0 0 30px #0000a0, 0 0 70px orangered;
+  right: -100px;
+  width: 650px;
+  height: 650px;
+  background-color: #9191a1;
+  border-radius: 1000px 0 0 0;
+  z-index: -1;
+}
+
+/* Estilos para telas menores (max-height: 650px) */
+@media screen and (max-height: 650px) {
+  .content {
+    position: relative;
+    top: -20px;
   }
-
-  .companyCard {
-    width: 75vw;
-    height: 20vh;
-    margin-top: 25px;
-    margin-left: 10.5vw;
+  .contentTitle {
+    position: relative;
+    top: -20px;
+  }
+  .contentText {
+    position: relative;
+    top: -20px;
+  }
+  .image {
+    position: relative;
+    top: -395px;
   }
 }
 
-@media screen and (max-height: 580px) {
-  section {
-    height: 60vh;
+/* Estilos para telas menores (max-width: 1160px) */
+@media screen and (max-width: 1160px) {
+  .image {
+    position: relative;
+    right: -10%;
+    top: -0;
+    width: 420px;
+    height: 420px;
   }
-  .companyCard {
+  .content {
+    position: relative;
+    top: -10px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 15px;
+    box-shadow: 0 0 10px #9191a1, 0 0 20px #9191a1, 0 0 40px #9191a1, 0 0 60px #fff;
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    left: 5.5%;
+    width: 90vw;
+  }
+  .content #logoContent {
+    position: relative;
+    left: 37%;
+    border-radius: 20px;
+  }
+  .contentTitle {
+    position: relative;
+    top: -20px;
+    margin-top: 0px;
+    margin-right: 0%;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 25px;
+  }
+  .contentText {
+    position: relative;
+    top: -20px;
+    margin-top: 0px;
+    margin-right: 0%;
+    text-align: center;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+}
 
+/* Estilos para telas menores (max-width: 478px) */
+@media screen and (max-width: 478px) {
+  .content #logoContent {
+    left: 25%;
   }
+  .contentText {
+    left: 15%;
+    height: 150px;
+    width: 75%;
+    position: relative;
+  }
+  .image {
+    width: 320px;
+    height: 320px;
+    top: 25px;
+  }
+}
+
+/* Estilos para telas menores (max-width: 678px) */
+@media screen and (max-width: 678px) {
+  /* Adicionei esta regra para ajustar o cabeçalho em telas menores */
+  #menuItems {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinhe os itens à esquerda em telas menores */
+  }
+
+  .menuItem {
+    width: 100%; /* Os itens ocuparão a largura total da tela em telas menores */
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilos para o rodapé e cabeçalho */
+.content {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+
+.contentText {
+  margin-top: 0px;
+  margin-right: 50%;
+  text-align: center;
+  padding-left: 40px;
+  padding-top: 0px;
+}
+
+.contentTitle {
+  margin-top: 0px;
+  margin-right: 50%;
+  text-align: center;
+  padding-left: 60px;
+  padding-top: 25px;
+}
+
+/* Certifica-se de que o cabeçalho e o rodapé não ultrapassem a altura máxima da seção de conteúdo */
+header {
+  max-height: 10vh; /* Altura máxima para o cabeçalho */
+}
+
+footer {
+  max-height: 10vh; /* Altura máxima para o rodapé */
+}
+
+/* Estilos para os ícones das redes sociais */
+#social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#social-icons img {
+  width: 30px;
+  height: 30px;
 }

@@ -1,73 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+    <title>Compania</title>
+    <!-- Links para os estilos CSS -->
+    <link rel="stylesheet" href="styles/contactStyles.css">
     <link rel="stylesheet" href="styles/companyStyles.css">
-    <title>Companhia</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+</head>
+<body>
     <header id="header">
-      <nav id="menu">
-          <ul id="menuItems">
-              <li id="logo" class="menuItem">
-                  <a href="index.html">
-                      <img src="./assets/logo.jpg" alt="logo">
-                  </a>
-              </li>
-              <li id="company" class="menuItem">
-                  <a href="company.html">
-                      <div class="button selected">
-                          <p>Empresa</p>
-                      </div>
-                  </a>
-              </li>
-              <li id="products" class="menuItem">
-                  <a href="products.html">
-                      <div class="button">
-                          <p>Produtos</p>
-                      </div>
-                  </a>
-              </li>
-              <li id="contact" class="menuItem">
-                  <a href="contact.html">
-                      <div class="button">
-                          <p>Contato</p>
-                      </div>
-                  </a>
-              </li>
-          </ul>
-      </nav>
+        <nav id="menu">
+            <ul id="menuItems">
+                <!-- Menu de navegação -->
+                <li id="logo" class="menuItem">
+                    <a href="index.html">
+                        <img src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                <li id="home" class="menuItem">
+                    <a href="index.html">
+                        <div class="button">
+                            <p>Início</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="company" class="menuItem">
+                    <a href="company.html">
+                        <div class="button">
+                            <p>Empresa</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="products" class="menuItem">
+                    <a href="products.html">
+                        <div class="button">
+                            <p>Produtos</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="contact" class="menuItem">
+                    <a href="contact.html">
+                        <div class="button">
+                            <p>Contato</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-
     <section>
-      <div id="vision" class="companyCard">
-        <h2>Visão</h2>
-        <p>
-          Ser a loja referência dentro do setor de vendas de microondas
-        </p>
-      </div>
-      <div id="mission" class="companyCard">
-        <h2>Missão</h2>
-        <p>
-          Promover e vender os melhores microondas aos clientes, prestando suporte de qualidade e excelência
-        </p>
-      </div>
-      <div id="companyValues" class="companyCard">
-        <h2>Valores</h2>
-        <ul>
-          <li>Relacionamento com o cliente</li>
-          <li>Excelência na entrega e atendimento</li>
-          <li>Comprometimento na venda</li>
-        </ul>
-      </div>
-    </section>
+        <!-- Conteúdo da página de contato -->
+        <div class="contactBackground">
+            <!-- Links para as redes sociais -->
+            <a id="face"><img src="https://logopng.com.br/logos/facebook-13.png" alt="facebook" width="50" height="50"></a>
+            <a id="instagram"><img src="https://brunopalmahidroponia.com.br/wp-content/uploads/2020/07/logo-instagram-png-fundo-transparente.png" alt="instagram" width="50" height="50"></a>
+            <a id="twitter"><img src="https://m.media-amazon.com/images/I/61w1Q5OxE2L.jpg" alt="twitter" width="50" height="50"></a>
+        </div>
+        <div class="contactBackground2"></div>
 
+        <!-- Conteúdo da página de empresa (company) -->
+        <div class="content">
+            <!-- Título da empresa -->
+            <h2 class="contentTitle">Rei do Micro-ondas</h2>
+            <!-- Texto da empresa -->
+            <h1>Bem-Vindo ao Rei dos Micro-ondas</h2>
+            <h3>Fundado em 1995, o Rei dos Micro-ondas é líder no mercado de aparelhos de cozinha. Começamos como uma pequena loja local, mas agora atendemos nacionalmente.</h3> 
+            <h3>Nossa equipe apaixonada busca constantemente inovações para oferecer os melhores produtos, garantindo qualidade e durabilidade.</h3>
+            <h3>Nosso compromisso com o cliente inclui <strong><a href="contact.html">atendimento excepcional</a></strong> e opções de pagamento flexíveis. </h3>
+            <h3>Agradecemos por escolher o Rei dos Micro-ondas como seu parceiro na cozinha. 
+            <h3>Esperamos continuar a servir você com os melhores produtos e soluções para sua cozinha nos anos vindouros.</h3>
+            <h3>Explore nossa gama de <strong><a href="products.html">produtos</a></strong> e entre em contato conosco para qualquer dúvida ou assistência. </h3>
+            <h3>Estamos aqui para tornar sua experiência na cozinha mais eficiente e agradável.</h3>
+            <h3>Obrigado por confiar no Rei dos Micro-ondas!</h3>
+        </div>
+    </section>
     <footer id="footer">
-      <p>
-        Copyright &copy; Rei do Micro-ondas
-      </p>
+        <!-- Rodapé -->
+        <p>Copyright © Rei do Micro-ondas</p>
     </footer>
-  </body>
+</body>
 </html>
