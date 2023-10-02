@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tag para definir a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8">
+    
+    <!-- Meta tag para configuração da viewport em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Produtos</title>
+    
+    <!-- Referência à folha de estilo CSS para estilizar a página de produtos -->
+    <link rel="stylesheet" href="styles/productsStyles.css">
+    
+    <!-- Referência à folha de estilo CSS para estilizar o cabeçalho e rodapé -->
+    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+</head>
+<body>
+    <header>
+        <!-- Navegação do cabeçalho -->
+        <nav id="menu">
+            <ul id="menuItems">
+                <!-- Logo da empresa como link para a página inicial -->
+                <li id="logo" class="menuItem">
+                    <a href="index.html">
+                        <img src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                
+                <!-- Links para outras páginas no menu -->
+                <li id="home" class="menuItem">
+                    <a href="index.html">
+                        <div class="button">
+                            <p>Início</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="company" class="menuItem">
+                    <a href="company.html">
+                        <div class="button">
+                            <p>Empresa</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="products" class="menuItem">
+                    <a href="products.html">
+                        <div class="button">
+                            <p>Produtos</p>
+                        </div>
+                    </a>
+                </li>
+                <li id="contact" class="menuItem">
+                    <a href="contact.html">
+                        <div class="button">
+                            <p>Contato</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <!-- Elementos de fundo para estilização -->
+        <div class="background"> </div>
+        <div class="background2"> </div>
+
+        <!-- Título da seção de produtos -->
+        <h1>Rei do Micro-ondas</h1>
+
+        <!-- Lista de produtos -->
+        <ul id="productList">
+            <!-- Produto 1 -->
+            <li class="product">
+                <!-- Imagem do Produto 1 -->
+                <img src="./produto1.png" alt="Produto 1">
+                
+                <!-- Título do Produto 1 -->
+                <h2>MS37R 1</h2>
+                
+                <!-- Descrição do Produto 1 -->
+                <p>Micro-ondas de Bancada Electrolux MS37R é o que faltava para equipar sua cozinha...</p> 
+                
+                <!-- Informações adicionais do Produto 1 -->
+                <p>Voltagem: 110V</p>
+                <p>Litragem: 27L</p>
+                <p>Preço: R$ 759,00</p>
+            </li>
+
+            <!-- Produto 2 -->
+            <li class="product">
+                <!-- Imagem do Produto 2 -->
+                <img src="produto2.jpg" alt="Produto 2">
+                
+                <!-- Título do Produto 2 -->
+                <h2>MRAS22</h2>
+                
+                <!-- Descrição do Produto 2 -->
+                <p>O Micro-ondas 20L Midea veio para ser seu novo aliado na cozinha...</p>
+                
+                <!-- Informações adicionais do Produto 2 -->
+                <p>Voltagem: 220V</p>
+                <p>Litragem: 20L</p>
+                <p>Preço: R$ 449,50</p>
+            </li>
+        </ul>
+    </section>
+    
+    <footer id="footer">
+        <!-- Rodapé com informações de direitos autorais -->
+        <p>Copyright &copy; Rei do Micro-ondas</p>
+    </footer>
+</body>
+</html>

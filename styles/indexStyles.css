@@ -1,0 +1,97 @@
+/* Estilos globais para todos os elementos */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* Estilos para o corpo da página */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Estilos para o cabeçalho da página */
+header {
+  background-color: #112;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
+
+/* Estilos para o menu de navegação */
+#menuItems {
+  display: flex;
+  list-style: none;
+  position: relative;
+  left: 1.4vw;
+}
+
+/* Estilos para cada item do menu */
+.menuItem {
+  border-right: black solid .5px;
+}
+
+/* Estilos para o logotipo no cabeçalho */
+#logo a img {
+  width: 75px;
+  border-radius: 25%;
+}
+
+/* Estilos para os botões do menu */
+.button {
+  background-color: white;
+  height: 65%;
+  width: 25vw;
+  color: black;
+}
+
+/* Animação de hover para os botões do menu */
+.button:hover {
+  animation: btnHover 1s forwards;
+}
+
+/* Estilos para o botão selecionado */
+.selected {
+  background-color: #c4c4c4;
+}
+
+/* Estilos para o texto dentro dos botões */
+.button p {
+  text-align: center;
+  padding-top: 15px;
+}
+
+/* Animação de hover para os botões */
+@keyframes btnHover {
+  0% {
+      background-color: white;
+      height: 65%;
+      width: 25vw;
+  }
+
+  100% {
+      background-color: rgb(255, 87, 56);
+      height: 68%;
+      width: 30vw;
+      box-shadow: 0 0 10px rgb(255, 87, 56), 0 0 30px rgb(253, 78, 47),
+          0 0 50px rgb(255, 74, 43), 0 0 70px rgb(255, 56, 21);
+  }
+}
+
+/* Estilos para telas pequenas (max-width: 550px) */
+@media screen and (max-width: 550px) {
+  .button {
+      width: 20vw;
+  }
+
+  .button:hover {
+      animation: none;
+      background-color: rgb(255, 87, 56);
+  }
+}
+
+/* Estilos para telas médias (min-width: 550px) e (max-width: 680px) */
+@media screen and (min-width: 550px) and (max-width: 680px) {
+  .button {
+      width: 25.8vw;
+  }
+}
