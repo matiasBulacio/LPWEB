@@ -79,3 +79,10 @@ h1 {
  width: 200px;
  height: 200px;
 }
+
+@media screen and (max-width: 850px) {
+  .background2 {
+    background-color: #6b6b77;
+  }
+
+}
