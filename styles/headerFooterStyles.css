@@ -14,6 +14,7 @@ header {
   background-color: #112;
   border-top-right-radius: 15%;
   border-bottom-left-radius: 15%;
+  z-index: 2;
 }
 
 #menuItems {
@@ -21,6 +22,7 @@ header {
   list-style: none;
   position: relative;
   left: 1.4vw;
+  z-index: 2;
 }
 .menuItem {
   border-right: black solid .5px;
