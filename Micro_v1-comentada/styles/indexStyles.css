@@ -1,155 +1,97 @@
-/* Define a fonte padrão e remove sublinhado em links */
+/* Estilos globais para todos os elementos */
 * {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
 
-/* Estilização da imagem */
-.image {
-  position: relative;
-  right: -55%; /* Move a imagem para a direita em relação ao contêiner pai */
-  top: -308px; /* Move a imagem para cima em relação ao contêiner pai */
-  width: 420px;
-  height: 420px;
+/* Estilos para o corpo da página */
+body {
+  margin: 0;
+  overflow: hidden;
 }
 
-/* Estilização do conteúdo principal */
-.content {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+/* Estilos para o cabeçalho da página */
+header {
+  background-color: #112;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+}
+
+/* Estilos para o menu de navegação */
+#menuItems {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-self: center;
+  list-style: none;
   position: relative;
-  left: 10vw; /* Move o conteúdo para a esquerda em relação ao contêiner pai */
-  top: 10vh; /* Move o conteúdo para cima em relação ao contêiner pai */
+  left: 1.4vw;
 }
 
-/* Estilização do logotipo no conteúdo */
-.content #logoContent {
-  position: relative;
-  left: 25%; /* Move o logotipo para a esquerda em relação ao contêiner pai */
-  border-radius: 20px;
+/* Estilos para cada item do menu */
+.menuItem {
+  border-right: black solid .5px;
 }
 
-/* Estilização do texto do conteúdo */
-.contentText {
-  margin-top: 0px;
-  margin-right: 50%;
+/* Estilos para o logotipo no cabeçalho */
+#logo a img {
+  width: 75px;
+  border-radius: 25%;
+}
+
+/* Estilos para os botões do menu */
+.button {
+  background-color: white;
+  height: 65%;
+  width: 25vw;
+  color: black;
+}
+
+/* Animação de hover para os botões do menu */
+.button:hover {
+  animation: btnHover 1s forwards;
+}
+
+/* Estilos para o botão selecionado */
+.selected {
+  background-color: #c4c4c4;
+}
+
+/* Estilos para o texto dentro dos botões */
+.button p {
   text-align: center;
-  padding-left: 40px;
-  padding-top: 0px;
+  padding-top: 15px;
 }
 
-/* Estilização do título do conteúdo */
-.contentTitle {
-  margin-top: 0px;
-  margin-right: 50%;
-  text-align: center;
-  padding-left: 60px;
-  padding-top: 25px;
-}
-
-/* Estilização do conteúdo principal */
-.main {
-  position: relative;
-  top: 14px;
-}
-
-/* Estilização do elemento de fundo com formato de meia lua */
-.halfCircle {
-  position: absolute;
-  bottom: -90px;
-  box-shadow: 0 0 10px #000040, 0 0 30px #0000a0, 0 0 70px orangered;
-  right: -100px;
-  width: 650px;
-  height: 650px;
-  background-color: #9191a1;
-  border-radius: 1000px 1000px 1000px 1000px;
-  z-index: -1;
-}
-
-/* Estilos de mídia para telas menores */
-@media screen and (max-height: 650px) {
-  /* Ajusta a posição do conteúdo e elementos relacionados para telas menores */
-  .content {
-      position: relative;
-      top: -20px;
+/* Animação de hover para os botões */
+@keyframes btnHover {
+  0% {
+      background-color: white;
+      height: 65%;
+      width: 25vw;
   }
-  .contentTitle {
-      position: relative;
-      top: -20px;
-  }
-  .contentText {
-      position: relative;
-      top: -20px;
-  }
-  .image {
-      position: relative;
-      top: -395px;
+
+  100% {
+      background-color: rgb(255, 87, 56);
+      height: 68%;
+      width: 30vw;
+      box-shadow: 0 0 10px rgb(255, 87, 56), 0 0 30px rgb(253, 78, 47),
+          0 0 50px rgb(255, 74, 43), 0 0 70px rgb(255, 56, 21);
   }
 }
 
-@media screen and (max-width: 1160px) {
-  /* Ajusta a posição e estilos para telas menores */
-  .image {
-      position: relative;
-      right: -10%;
-      top: 0;
-      width: 420px;
-      height: 420px;
+/* Estilos para telas pequenas (max-width: 550px) */
+@media screen and (max-width: 550px) {
+  .button {
+      width: 20vw;
   }
-  .content {
-      position: relative;
-      top: -10px;
-      background-color: rgb(222, 222, 222);
-      border-radius: 15px;
-      box-shadow: 0 0 10px #9191a1, 0 0 20px #9191a1, 0 0 40px #9191a1, 0 0 60px #fff;
-      height: 75vh;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      left: 5.5%;
-      width: 90vw;
-  }
-  .content #logoContent {
-      position: relative;
-      left: 37%;
-      border-radius: 20px;
-  }
-  .contentTitle {
-      position: relative;
-      top: -20px;
-      margin-top: 0px;
-      margin-right: 0%;
-      text-align: center;
-      padding-left: 0px;
-      padding-top: 25px;
-  }
-  .contentText {
-      position: relative;
-      top: -20px;
-      margin-top: 0px;
-      margin-right: 0%;
-      text-align: center;
-      padding-left: 0px;
-      padding-top: 0px;
+
+  .button:hover {
+      animation: none;
+      background-color: rgb(255, 87, 56);
   }
 }
 
-@media screen and (max-width: 478px) {
-  /* Ajusta a posição e estilos para telas ainda menores */
-  .content #logoContent {
-      left: 25%;
-  }
-  .contentText {
-      left: 15%;
-      height: 150px;
-      width: 75%;
-      position: relative;
-  }
-  .image {
-      width: 320px;
-      height: 320px;
-      top: 25px;
+/* Estilos para telas médias (min-width: 550px) e (max-width: 680px) */
+@media screen and (min-width: 550px) and (max-width: 680px) {
+  .button {
+      width: 25.8vw;
   }
 }

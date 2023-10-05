@@ -1,25 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <!-- Define a codificação de caracteres do documento -->
+    <!-- Configuração do documento HTML -->
     <meta charset="utf-8">
-    <!-- Define o título da página exibido na guia do navegador -->
     <title>Rei dos Micro-ondas</title>
-    <!-- Define a compatibilidade com o Microsoft Edge -->
     <meta content="Edge">
-    <!-- Define as configurações de visualização em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
-    <!-- Link para o carregamento de fontes externas do Google Fonts -->
+    <!-- Links para fontes do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <!-- Links para os arquivos de estilo CSS -->
-    <link rel="stylesheet" href="styles/indexStyles.css">
+    <!-- Links para arquivos de estilo CSS -->
+    <link rel="stylesheet" href="styles/companyStyles.css">
     <link rel="stylesheet" href="styles/headerFooterStyles.css">
+    <link rel="stylesheet" href="styles/indexStyles.css"> 
 </head>
-
 <body class="body">
     <!-- Cabeçalho da página -->
     <header id="header">
@@ -27,39 +23,43 @@
         <nav id="menu">
             <!-- Lista de itens do menu -->
             <ul id="menuItems">
-                <!-- Item do logotipo -->
+                <!-- Logotipo da empresa -->
                 <li id="logo" class="menuItem">
-                    <!-- Link para a página inicial -->
                     <a href="index.html">
-                        <!-- Imagem do logotipo -->
                         <img src="./assets/logo.jpg" alt="logo">
                     </a>
                 </li>
-                <!-- Item da página "Empresa" -->
+                <!-- Item do menu: Início -->
+                <li id="home" class="menuItem">
+                    <a href="index.html">
+                        <!-- Botão "Início" -->
+                        <div class="button">
+                            <p>Início</p>
+                        </div>
+                    </a>
+                </li>
+                <!-- Item do menu: Empresa -->
                 <li id="company" class="menuItem">
-                    <!-- Link para a página "Empresa" -->
                     <a href="company.html">
-                        <!-- Botão com o texto "Empresa" -->
+                        <!-- Botão "Empresa" -->
                         <div class="button">
                             <p>Empresa</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Produtos" -->
+                <!-- Item do menu: Produtos -->
                 <li id="products" class="menuItem">
-                    <!-- Link para a página "Produtos" -->
                     <a href="products.html">
-                        <!-- Botão com o texto "Produtos" -->
+                        <!-- Botão "Produtos" -->
                         <div class="button">
                             <p>Produtos</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Contato" -->
+                <!-- Item do menu: Contato -->
                 <li id="contact" class="menuItem">
-                    <!-- Link para a página "Contato" -->
                     <a href="contact.html">
-                        <!-- Botão com o texto "Contato" -->
+                        <!-- Botão "Contato" -->
                         <div class="button">
                             <p>Contato</p>
                         </div>
@@ -68,29 +68,26 @@
             </ul>
         </nav>
     </header>
-    <!-- Seção principal de conteúdo -->
+    <!-- Seção de conteúdo principal -->
     <section class="content">
+        <!-- Div principal do conteúdo -->
         <div class="main">
-            <!-- Imagem do logotipo do conteúdo -->
             <img id="logoContent" src="./assets/logo.jpg" width="200" height="200">
-            <!-- Título do conteúdo -->
             <h2 class="contentTitle">Rei do Micro-ondas</h2>
-            <!-- Texto do conteúdo -->
             <h3 class="contentText">Na nossa loja de micro-ondas, somos apaixonados por simplificar a vida na cozinha.
                 Com décadas de experiência, nosso compromisso é fornecer produtos de alta qualidade que transformam
                 tarefas cotidianas em momentos prazerosos. Estamos sempre inovando para atender às necessidades dos
                 nossos clientes.</h3>
-            <!-- Imagem relacionada ao conteúdo -->
-            <img class="image" src="./assets/microondas.png" alt="imagem" width="420" height="420">
+            <!-- Imagem no conteúdo -->
+            <img class="image" src="https://www.pngmart.com/files/2/Microwave-Oven-PNG-HD.png" alt="imagem" width="420"
+                height="420">
         </div>
     </section>
-    <!-- Elemento gráfico de metade de círculo -->
+    <!-- Elemento de forma (meio círculo) no rodapé -->
     <div class="halfCircle"></div>
     <!-- Rodapé da página -->
     <footer id="footer">
-        <!-- Texto de direitos autorais -->
         <p>Copyright © Rei do Micro-ondas</p>
     </footer>
 </body>
-
 </html>

@@ -1,136 +1,147 @@
-/* Define a fonte padrão e remove sublinhado em links */
+/* Estilos globais para todos os elementos */
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
 }
 
-/* Estilização global do corpo da página */
+/* Estilos para o corpo da página */
 body {
-  margin: 0px;
-  overflow-y: hidden; /* Esconde a barra de rolagem vertical */
-  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-  height: 100%;
+   margin: 0px; 
+   overflow-y: hidden; 
+   overflow-x: hidden; 
+   height: 100%; 
 }
 
-/* Estilização do cabeçalho (header) */
+/* Estilos para o cabeçalho da página */
 header {
-  background-color: #112;
-  border-top-right-radius: 15%;
-  border-bottom-left-radius: 15%;
-  z-index: 2;
+   background-color: #112;
+   border-top-right-radius: 15%; 
+   border-bottom-left-radius: 15%; 
 }
 
-/* Estilização da lista de itens do menu */
+/* Estilos para o menu de navegação */
 #menuItems {
-  display: flex;
-  list-style: none;
-  position: relative;
-  left: 1.4vw;
-  z-index: 2;
+   display: flex; 
+   list-style: none; /* Remove os marcadores de lista */
+   position: relative; 
+   left: 1.4vw; /* Desloca o menu para a esquerda em relação à posição normal */
 }
 
-/* Estilização dos itens do menu */
+/* Estilos para cada item do menu */
 .menuItem {
-  border-right: black solid .5px;
+   border-right: black solid .5px; /* Adiciona uma borda direita aos itens do menu */
 }
 
-/* Estilização do logotipo no menu */
+/* Estilos para o logotipo no cabeçalho */
 #logo a img {
-  width: 75px;
-  border-radius: 25%;
+   width: 75px; /* Define a largura da imagem do logotipo */
+   border-radius: 25%; /* Aplica um raio de borda arredondada à imagem */
 }
 
-/* Estilização dos botões no menu */
+/* Estilos para os botões do menu */
 .button {
-  background-color: white;
-  height: 65%;
-  width: 25vw;
-  color: black;
+   background-color: white; /* Cor de fundo dos botões */
+   height: 65%; /* Altura dos botões */
+   width: 25vw; /* Largura dos botões */
+   color: black; /* Cor do texto nos botões */
 }
 
-/* Efeito de hover nos botões */
+/* Animação de hover para os botões do menu */
 .button:hover {
-  animation: btnHover 1s forwards;
+   animation: btnHover 1s forwards; /* Aplica uma animação de hover nos botões */
 }
 
-/* Estilo para o botão selecionado */
+/* Estilos para o botão selecionado */
 .selected {
-  background-color: #c4c4c4;
+   background-color: #c4c4c4; /* Cor de fundo do botão selecionado */
 }
 
-/* Estilização do texto nos botões */
+/* Estilos para o texto dentro dos botões */
 .button p {
-  text-align: center;
-  padding-top: 15px;
+   text-align: center; /* Alinha o texto ao centro dos botões */
+   padding-top: 15px; /* Espaçamento superior do texto nos botões */
 }
 
-/* Animação de hover nos botões */
+/* Animação de hover para os botões */
 @keyframes btnHover {
-  0% {
+   0% {
       background-color: white;
       height: 65%;
       width: 25vw;
-  }
-  100% {
-      background-color: rgb(255, 87, 56);
+   } 100% {
+      background-color: rgb(255,87,56);
       height: 68%;
       width: 30vw;
-      box-shadow: 0 0 10px rgb(255, 87, 56), 
+      box-shadow: 0 0 10px rgb(255,87,56), 
                   0 0 30px rgb(253, 78, 47), 
                   0 0 50px rgb(255, 74, 43), 
                   0 0 70px rgb(255, 56, 21);
-  }
+   }
 }
 
-/* Estilos de mídia para telas com largura menor ou igual a 550px */
+/* Estilos para telas pequenas (largura menor ou igual a 550px) */
 @media screen and (max-width: 550px) {
-  .button {
-      width: 20vw;
-  }
-  .button:hover {
-      animation: none; /* Remove a animação de hover */
-      background-color: rgb(255, 87, 56);
-  }
+   .button {
+      width: 20vw; 
+   }
+   .button:hover {
+      animation: none; 
+      background-color: rgb(255,87,56); /* Cor de fundo dos botões no hover */
+   }
 }
 
-/* Estilos de mídia para telas com largura entre 550px e 680px */
+/* Estilos para telas médias (largura entre 550px e 680px) */
 @media screen and (min-width: 550px) and (max-width: 680px) {
-  /* Redefine a animação de hover para telas específicas */
-  @keyframes btnHover {
+
+   /* Redefine a animação de hover para telas médias */
+   @keyframes btnHover {
       0% {
-          background-color: white;
-          height: 65%;
-          width: 25vw;
+         background-color: white;
+         height: 65%;
+         width: 25vw;
+      } 100% {
+         background-color: rgb(255,87,56);
+         height: 68%;
+         width: 25.8vw;
       }
-      100% {
-          background-color: rgb(255, 87, 56);
-          height: 68%;
-          width: 25.8vw;
-      }
-  }
+   }
 }
 
-/* Estilos de mídia para telas com altura menor ou igual a 765px */
+/* Estilos para telas com altura menor ou igual a 765px */
 @media screen and (max-height: 765px) {
-  footer {
-      position: relative; /* Move o rodapé para cima */
-  }
+   footer {
+      position: relative; /* Define a posição do rodapé como relativa */
+   }
 }
 
-/* Estilização do rodapé */
+/* Estilos para o rodapé da página */
 footer {
-  bottom: 0;
-  width: 100vw;
-  position: absolute;
-  text-align: center;
-  vertical-align: middle;
+   bottom: 0; 
+   width: 100vw; 
+   position: absolute; 
+   text-align: center; 
+   vertical-align: middle; 
 }
 
-/* Estilização do texto no rodapé */
+/* Estilos para o texto no rodapé */
 footer p {
-  font-size: larger;
-  text-align: center;
-  text-decoration: solid;
-  vertical-align: middle;
-  background-color: RGBA(100, 100, 100, 0.05);
+   font-size: larger; 
+   text-align: center; 
+   text-decoration: solid; 
+   vertical-align: middle; 
+   background-color: RGBA(100, 100, 100, 0.05); 
+}
+
+/* Estilos para telas pequenas (largura menor ou igual a 678px) */
+@media screen and (max-width: 678px) {
+   /* Adicionei esta regra para ajustar o cabeçalho em telas menores */
+   #menuItems {
+      flex-wrap: wrap; /* Envolve os itens do menu em várias linhas */
+      justify-content: flex-start; /* Alinha os itens à esquerda em telas menores */
+   }
+ 
+   .menuItem {
+      width: 100%; /* Os itens ocuparão a largura total da tela em telas menores */
+      margin-bottom: 10px; /* Espaçamento inferior entre os itens do menu */
+   }
 }

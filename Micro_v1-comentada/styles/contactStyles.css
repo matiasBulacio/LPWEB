@@ -1,229 +1,238 @@
-/* Define a fonte padrão e remove sublinhado em links */
+/* Define a fonte padrão para todo o conteúdo e remove sublinhado de links */
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
 }
 
-/* Estilização global do corpo da página */
-body {
-  margin: 0px;
-  overflow-y: hidden; /* Esconde a barra de rolagem vertical */
-  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-  height: 100%;
+/* Define margens e oculta barras de rolagem horizontal e vertical */
+body{
+   margin: 0px;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   height: 100%;
 }
 
-/* Estilização da seção principal */
+/* Define a aparência da seção principal da página */
 section {
-  display: flex;
-  flex-direction: column;
-  height: 78vh;
+   display: flex;
+   flex-direction: column;
+   height: 78vh;
 }
 
-/* Estilização do plano de fundo do contato */
+/* Estilos para o fundo com ícones de redes sociais */
 .contactBackground {
-  background-color: #7a7a85;
-  border-radius: 100%;
-  top: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  height: 30vw;
-  position: absolute;
-  right: -8vw;
-  width: 30vw;
-  box-shadow: 0 0 10px gray,
-              0 0 20px gray,
-              0 0 30px gray,
-              0 0 40px gray,
-              0 0 80px gray;
+   background-color: #7a7a85;
+   border-radius: 100%;
+   top: 5vh;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   height: 30vw;
+   position: absolute;
+   right: -8vw;
+   width: 30vw;
+   box-shadow: 0 0 10px gray,
+   0 0 20px gray,
+   0 0 30px gray,
+   0 0 40px gray,
+   0 0 80px gray;
+   z-index: -1;
 }
 
-/* Estilização dos ícones de redes sociais */
+/* Estilos para os ícones de redes sociais */
 .contactBackground a {
-  left: 55%;
-  margin-bottom: 10px;
-  top: 25%;
-  position: relative;
+   left: 55%;
+   margin-bottom: 10px;
+   top: 25%;
+   position: relative;
 }
 
-/* Estilização do segundo plano de fundo do contato */
+/* Estilos para o fundo circular secundário */
 .contactBackground2 {
-  background-color: #6f6b7d;
-  border-radius: 100%;
-  height: 500px;
-  margin: 100px 0px 0px -200px;
-  position: absolute;
-  width: 500px;
-  box-shadow: 0 0 10px gray;
-  z-index: -2;
+   background-color: #6f6b7d;
+   border-radius: 100%;
+   height: 500px;
+   margin: 100px 0px 0px -200px;
+   position: absolute;
+   width: 500px;
+   box-shadow: 0 0 10px gray;
+   z-index: 0;
 }
 
-/* Estilização da seção de contato */
+/* Estilos para a seção de contato */
 .contact {
-  display: flex;
-  flex-direction: column;
-  left: 33vw;
-  position: absolute;
-  top: 19vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #d1d1eb;
-  border: #00f solid .5px;
-  border-radius: 100px;
-  height: 70vh;
-  box-shadow: 2px 2px red,
-              -2px -2px red,
-              0 0 10px #002,
-              0 0 20px #002,
-              0 0 30px #002;
-  width: 35vw;
+   display: flex;
+   flex-direction: column;
+   left: 33vw;
+   position: absolute;
+   top: 19vh;
+   justify-content: center;
+   align-items: center;
+   background-color: #d1d1eb;
+   border: #00f solid .5px;
+   border-radius: 100px;
+   height: 70vh;
+   box-shadow: 2px 2px red, 
+      -2px -2px red,
+      0 0 10px #002,
+      0 0 20px #002,
+      0 0 30px #002;
+   width: 35vw;
 }
 
-/* Estilização do formulário de contato */
+/* Estilos para o formulário de contato */
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
 }
 
-/* Estilização das etiquetas no formulário */
+/* Estilos para as etiquetas do formulário */
 .form label {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+   background-color: rgba(0,0,0, 0.05);
+   border-radius: 5px;
 }
 
-/* Estilização do foco em campos de entrada */
+/* Estilos para campos de entrada de texto quando em foco */
 input:focus, textarea:focus {
-  border-color: #016fff;
-  outline: 0;
+   border-color: #016fff;
+   outline: 0;
 }
 
-/* Estilização do campo de texto */
+/* Estilos para a área de texto */
 textarea {
-  width: 250px;
+   width: 250px;
 }
 
-/* Estilização do botão de envio */
+/* Estilos para o botão de envio */
 .submit {
-  margin-top: 15px;
-  position: relative;
-  width: 50%;
-  border-radius: 10px;
-  background-color: rgb(0, 0, 76);
-  color: white;
-  border: 2px solid white;
+   margin-top: 15px;
+   position: relative;
+   width: 50%;
+   border-radius: 10px;
+   background-color: rgb(0, 0, 76);
+   color: white;
+   border: 2px solid white;
 }
 
-/* Efeito de hover no botão de envio */
+/* Estilos para o botão de envio ao passar o mouse */
 .submit:hover {
-  animation: submitAnimation 1s forwards;
+   animation: submitAnimation 1s forwards;
 }
 
-/* Animação de hover no botão de envio */
+/* Animação para o botão de envio */
 @keyframes submitAnimation {
-  0% {
+   0% {
       width: 50%;
-  }
-  100% {
+   } 
+   100% {
       width: 56%;
-      background-color: rgb(255, 87, 56);
-      box-shadow: 0 0 10px red,
-                  0 0 30px red,
-                  0 0 50px red,
-                  0 0 70px red;
-  }
+      background-color: rgb(255,87,56);
+      box-shadow: 0 0 10px red, 
+      0 0 30px red, 
+      0 0 50px red, 
+      0 0 70px red;
+   }
 }
 
-/* Estilização do título */
+/* Estilos para o cabeçalho h1 */
 h1 {
   position: relative;
   top: 7px;
 }
 
-/* Estilos de mídia para telas com altura menor ou igual a 600px */
-@media screen and (max-height: 600px) {
-  #message {
+/* Estilos para telas com altura máxima de 600px */
+@media screen and (height <= 600px){
+   #message {
       height: 25vh;
-  }
-  .contact {
+   }
+   .contact {
       height: 350px;
-  }
+   }
 }
 
-/* Estilos de mídia para telas com altura maior que 780px */
-@media screen and (min-height: 780px) {
-  /* Ajusta a posição das etiquetas no formulário */
-  .form label {
+/* Estilos para telas com altura maior que 780px */
+@media screen and (height > 780px){
+   .form label {
       margin-top: 4.8vh;
-  }
-  /* Ajusta a altura dos campos de entrada */
-  input {
+   }
+   input {
       height: 2.4vh;
       border-radius: 10px;
-  }
-  /* Ajusta a largura dos campos de entrada */
-  input, textarea {
+   }
+   input, textarea {
       width: 25vw;
-  }
+   }
 }
 
-/* Estilos de mídia para telas com largura menor ou igual a 805px */
+/* Estilos para telas com largura máxima de 805px */
 @media screen and (max-width: 805px) {
-  /* Ajusta o plano de fundo do contato para telas menores */
-  .contactBackground {
+   .contactBackground {
       right: -60px;
-      top: 140px;
+      top: 40px;
       width: 250px;
       height: 250px;
-  }
-  /* Ajusta a posição dos ícones de redes sociais */
-  .contactBackground a {
+   }
+
+   .contactBackground a {
       position: relative;
       left: 120px;
       top: 60px;
-  }
+   }
 }
 
-/* Estilos de mídia para telas com largura menor ou igual a 910px */
+/* Estilos para telas com largura máxima de 910px */
 @media screen and (max-width: 910px) {
-  /* Ajusta o alinhamento das etiquetas no formulário */
-  label {
+   label {
       text-align: center;
-      vertical-align: middle;
+      vertical-align: middle;  
       width: 75%;
-  }
-  /* Ajusta a largura dos campos de entrada */
-  input {
+   }
+
+   input {
       width: 100%;
-  }
-  /* Ajusta a largura do campo de mensagem */
-  #message {
+   }
+
+   #message {
       width: 50vw;
-  }
-  /* Ajusta a largura e posição do bloco de contato */
-  .contact {
+   }
+
+   .contact {
       border-radius: 25px;
       width: 60vw;
       position: absolute;
       left: 60px;
-  }
+   }
 }
 
-/* Estilos de mídia para telas com largura maior ou igual a 910px */
+/* Estilos para telas com largura mínima de 910px */
 @media screen and (min-width: 910px) {
-  /* Ajusta o espaçamento e margem dos campos de entrada */
-  input, textarea {
+   input, textarea {
       border-radius: 5%;
       margin-left: 15px;
-  }
-  /* Ajusta a margem do campo de email */
-  #email {
+   }
+
+   #email {
       margin-left: 33px;
-  }
-  /* Ajusta a margem do campo de nome */
-  #name {
+   }
+
+   #name {
       margin-left: 29px;
-  }
+   }
+}
+
+/* Estilos para telas com largura máxima de 678px */
+@media screen and (max-width: 678px) {
+   /* Adicionei esta regra para ajustar o cabeçalho em telas menores */
+   #menuItems {
+     flex-wrap: wrap;
+     justify-content: flex-start; /* Alinhe os itens à esquerda em telas menores */
+   }
+ 
+   .menuItem {
+     width: 100%; /* Os itens ocuparão a largura total da tela em telas menores */
+     margin-bottom: 10px;
+   }
 }

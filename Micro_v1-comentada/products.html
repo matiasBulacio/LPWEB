@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <!-- Define a codificação de caracteres do documento -->
+    <!-- Meta tag para definir a codificação de caracteres como UTF-8 -->
     <meta charset="UTF-8">
-    <!-- Define as configurações de visualização em dispositivos móveis -->
+    
+    <!-- Meta tag para configuração da viewport em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Define o título da página exibido na guia do navegador -->
+    
+    <!-- Título da página exibido na aba do navegador -->
     <title>Produtos</title>
-    <!-- Links para os arquivos de estilo CSS -->
+    
+    <!-- Referência à folha de estilo CSS para estilizar a página de produtos -->
     <link rel="stylesheet" href="styles/productsStyles.css">
+    
+    <!-- Referência à folha de estilo CSS para estilizar o cabeçalho e rodapé -->
     <link rel="stylesheet" href="styles/headerFooterStyles.css">
 </head>
-
 <body>
-    <!-- Cabeçalho da página -->
     <header>
-        <!-- Menu de navegação -->
+        <!-- Navegação do cabeçalho -->
         <nav id="menu">
-            <!-- Lista de itens do menu -->
             <ul id="menuItems">
-                <!-- Item do logotipo -->
+                <!-- Logo da empresa como link para a página inicial -->
                 <li id="logo" class="menuItem">
-                    <!-- Link para a página inicial -->
                     <a href="index.html">
-                        <!-- Imagem do logotipo -->
                         <img src="./assets/logo.jpg" alt="logo">
                     </a>
                 </li>
-                <!-- Item da página "Empresa" -->
+                
+                <!-- Links para outras páginas no menu -->
+                <li id="home" class="menuItem">
+                    <a href="index.html">
+                        <div class="button">
+                            <p>Início</p>
+                        </div>
+                    </a>
+                </li>
                 <li id="company" class="menuItem">
-                    <!-- Link para a página "Empresa" -->
                     <a href="company.html">
-                        <!-- Botão com o texto "Empresa" -->
                         <div class="button">
                             <p>Empresa</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Produtos" (selecionado) -->
                 <li id="products" class="menuItem">
-                    <!-- Link para a página atual (Produtos) -->
-                    <a href="#">
-                        <!-- Botão com o texto "Produtos" e classe "selected" para indicar seleção -->
-                        <div class="button selected">
+                    <a href="products.html">
+                        <div class="button">
                             <p>Produtos</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Contato" -->
                 <li id="contact" class="menuItem">
-                    <!-- Link para a página "Contato" -->
                     <a href="contact.html">
-                        <!-- Botão com o texto "Contato" -->
                         <div class="button">
                             <p>Contato</p>
                         </div>
@@ -61,64 +60,56 @@
             </ul>
         </nav>
     </header>
-
+    
     <section>
-        <!-- Div com a classe "background") -->
-        <div class="background">
-        </div>
-        <!-- Div com a classe "background2"-->
+        <!-- Elementos de fundo para estilização -->
+        <div class="background"> </div>
         <div class="background2"> </div>
 
-        <!-- Título da página -->
+        <!-- Título da seção de produtos -->
         <h1>Rei do Micro-ondas</h1>
 
         <!-- Lista de produtos -->
-        <div id="productList">
-            <!-- Lista não ordenada com produtos -->
-            <ul class="products">
-                <!-- Produto 1 -->
-                <li class="product">
-                    <!-- Imagem do Produto 1 -->
-                    <img src="./assets/produtos/produto1.png" alt="Produto 1">
-                    <!-- Título do Produto 1 -->
-                    <h2>MS37R 1</h2>
-                    <!-- Descrição do Produto 1 -->
-                    <p>Micro-ondas de Bancada Electrolux MS37R é o que faltava para equipar sua cozinha...</p>
-                    <!-- Informações adicionais do Produto 1 -->
-                    <p>Voltagem: 110V</p>
-                    <p>Litragem: 27L</p>
-                    <p>Preço: R$ 759,00</p>
-                </li>
+        <ul id="productList">
+            <!-- Produto 1 -->
+            <li class="product">
+                <!-- Imagem do Produto 1 -->
+                <img src="./produto1.png" alt="Produto 1">
+                
+                <!-- Título do Produto 1 -->
+                <h2>MS37R 1</h2>
+                
+                <!-- Descrição do Produto 1 -->
+                <p>Micro-ondas de Bancada Electrolux MS37R é o que faltava para equipar sua cozinha...</p> 
+                
+                <!-- Informações adicionais do Produto 1 -->
+                <p>Voltagem: 110V</p>
+                <p>Litragem: 27L</p>
+                <p>Preço: R$ 759,00</p>
+            </li>
 
-                <!-- Produto 2 -->
-                <li>
-                    <!-- Imagem do Produto 2 -->
-                    <img src="./assets/produtos/produto2.jpg" alt="Produto 2">
-                    <!-- Título do Produto 2 -->
-                    <h2>MRAS22</h2>
-                    <!-- Descrição do Produto 2 -->
-                    <p>O Micro-ondas 20L Midea veio para ser seu novo aliado na cozinha...</p>
-                    <!-- Informações adicionais do Produto 2 -->
-                    <p>Voltagem: 220V</p>
-                    <p>Litragem: 20L</p>
-                    <p>Preço: R$ 449,50</p>
-                </li>
-            </ul>
-        </div>
+            <!-- Produto 2 -->
+            <li class="product">
+                <!-- Imagem do Produto 2 -->
+                <img src="produto2.jpg" alt="Produto 2">
+                
+                <!-- Título do Produto 2 -->
+                <h2>MRAS22</h2>
+                
+                <!-- Descrição do Produto 2 -->
+                <p>O Micro-ondas 20L Midea veio para ser seu novo aliado na cozinha...</p>
+                
+                <!-- Informações adicionais do Produto 2 -->
+                <p>Voltagem: 220V</p>
+                <p>Litragem: 20L</p>
+                <p>Preço: R$ 449,50</p>
+            </li>
+        </ul>
     </section>
-
-    <!-- Rodapé da página -->
+    
     <footer id="footer">
-        <!-- Texto de direitos autorais -->
-        <p>
-            Copyright &copy; Rei do Micro-ondas
-        </p>
+        <!-- Rodapé com informações de direitos autorais -->
+        <p>Copyright &copy; Rei do Micro-ondas</p>
     </footer>
-	
-    <script>
-        // console.log(window.screen)
-    </script>
-
 </body>
-
 </html>

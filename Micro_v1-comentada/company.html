@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <!-- Define a codificação de caracteres do documento -->
     <meta charset="UTF-8">
-    <!-- Define as configurações de visualização em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links para os arquivos de estilo CSS -->
-    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+    <title>Compania</title>
+    <!-- Links para os estilos CSS -->
+    <link rel="stylesheet" href="styles/contactStyles.css">
     <link rel="stylesheet" href="styles/companyStyles.css">
-    <!-- Define o título da página exibido na guia do navegador -->
-    <title>Companhia</title>
+    <link rel="stylesheet" href="styles/headerFooterStyles.css">
 </head>
 <body>
-    <!-- Cabeçalho da página -->
     <header id="header">
-        <!-- Menu de navegação -->
         <nav id="menu">
-            <!-- Lista de itens do menu -->
             <ul id="menuItems">
-                <!-- Item do logotipo -->
+                <!-- Menu de navegação -->
                 <li id="logo" class="menuItem">
-                    <!-- Link para a página inicial -->
                     <a href="index.html">
-                        <!-- Imagem do logotipo -->
                         <img src="./assets/logo.jpg" alt="logo">
                     </a>
                 </li>
-                <!-- Item da página "Empresa" (selecionado) -->
+                <li id="home" class="menuItem">
+                    <a href="index.html">
+                        <div class="button">
+                            <p>Início</p>
+                        </div>
+                    </a>
+                </li>
                 <li id="company" class="menuItem">
-                    <!-- Link para a página atual (Empresa) -->
                     <a href="company.html">
-                        <!-- Botão com o texto "Empresa" e classe "selected" para indicar seleção -->
-                        <div class="button selected">
+                        <div class="button">
                             <p>Empresa</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Produtos" -->
                 <li id="products" class="menuItem">
-                    <!-- Link para a página "Produtos" -->
                     <a href="products.html">
-                        <!-- Botão com o texto "Produtos" -->
                         <div class="button">
                             <p>Produtos</p>
                         </div>
                     </a>
                 </li>
-                <!-- Item da página "Contato" -->
                 <li id="contact" class="menuItem">
-                    <!-- Link para a página "Contato" -->
                     <a href="contact.html">
-                        <!-- Botão com o texto "Contato" -->
                         <div class="button">
                             <p>Contato</p>
                         </div>
@@ -59,41 +50,35 @@
             </ul>
         </nav>
     </header>
-
     <section>
-        <!-- Seção de informações da empresa -->
-        <div id="vision" class="companyCard">
-            <!-- Título da seção -->
-            <h2>Visão</h2>
-            <!-- Texto da visão da empresa -->
-            <p>Ser a loja referência dentro do setor de vendas de microondas</p>
+        <!-- Conteúdo da página de contato -->
+        <div class="contactBackground">
+            <!-- Links para as redes sociais -->
+            <a id="face"><img src="https://logopng.com.br/logos/facebook-13.png" alt="facebook" width="50" height="50"></a>
+            <a id="instagram"><img src="https://brunopalmahidroponia.com.br/wp-content/uploads/2020/07/logo-instagram-png-fundo-transparente.png" alt="instagram" width="50" height="50"></a>
+            <a id="twitter"><img src="https://m.media-amazon.com/images/I/61w1Q5OxE2L.jpg" alt="twitter" width="50" height="50"></a>
         </div>
+        <div class="contactBackground2"></div>
 
-        <div id="mission" class="companyCard">
-            <!-- Título da seção -->
-            <h2>Missão</h2>
-            <!-- Texto da missão da empresa -->
-            <p>Promover e vender os melhores microondas aos clientes, prestando suporte de qualidade e excelência</p>
-        </div>
-
-        <div id="companyValues" class="companyCard">
-            <!-- Título da seção -->
-            <h2>Valores</h2>
-            <!-- Lista de valores da empresa -->
-            <ul>
-                <li>Relacionamento com o cliente</li>
-                <li>Excelência na entrega e atendimento</li>
-                <li>Comprometimento na venda</li>
-            </ul>
+        <!-- Conteúdo da página de empresa (company) -->
+        <div class="content">
+            <!-- Título da empresa -->
+            <h2 class="contentTitle">Rei do Micro-ondas</h2>
+            <!-- Texto da empresa -->
+            <h1>Bem-Vindo ao Rei dos Micro-ondas</h2>
+            <h3>Fundado em 1995, o Rei dos Micro-ondas é líder no mercado de aparelhos de cozinha. Começamos como uma pequena loja local, mas agora atendemos nacionalmente.</h3> 
+            <h3>Nossa equipe apaixonada busca constantemente inovações para oferecer os melhores produtos, garantindo qualidade e durabilidade.</h3>
+            <h3>Nosso compromisso com o cliente inclui <strong><a href="contact.html">atendimento excepcional</a></strong> e opções de pagamento flexíveis. </h3>
+            <h3>Agradecemos por escolher o Rei dos Micro-ondas como seu parceiro na cozinha. 
+            <h3>Esperamos continuar a servir você com os melhores produtos e soluções para sua cozinha nos anos vindouros.</h3>
+            <h3>Explore nossa gama de <strong><a href="products.html">produtos</a></strong> e entre em contato conosco para qualquer dúvida ou assistência. </h3>
+            <h3>Estamos aqui para tornar sua experiência na cozinha mais eficiente e agradável.</h3>
+            <h3>Obrigado por confiar no Rei dos Micro-ondas!</h3>
         </div>
     </section>
-
-    <!-- Rodapé da página -->
     <footer id="footer">
-        <!-- Texto de direitos autorais -->
-        <p>
-            Copyright &copy; Rei do Micro-ondas
-        </p>
+        <!-- Rodapé -->
+        <p>Copyright © Rei do Micro-ondas</p>
     </footer>
 </body>
 </html>
