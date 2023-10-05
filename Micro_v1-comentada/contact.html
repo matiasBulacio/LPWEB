@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Define a codificação de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Define as configurações de visualização em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página exibido na guia do navegador -->
+    <title>Contato</title>
+    <!-- Links para os arquivos de estilo CSS -->
+    <link rel="stylesheet" href="styles/contactStyles.css">
+    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header id="header">
+        <!-- Menu de navegação -->
+        <nav id="menu">
+            <!-- Lista de itens do menu -->
+            <ul id="menuItems">
+                <!-- Item do logotipo -->
+                <li id="logo" class="menuItem">
+                    <!-- Link para a página inicial -->
+                    <a href="index.html">
+                        <!-- Imagem do logotipo -->
+                        <img src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                <!-- Item da página "Empresa" -->
+                <li id="company" class="menuItem">
+                    <!-- Link para a página "Empresa" -->
+                    <a href="company.html">
+                        <!-- Botão com o texto "Empresa" -->
+                        <div class="button">
+                            <p>Empresa</p>
+                        </div>
+                    </a>
+                </li>
+                <!-- Item da página "Produtos" -->
+                <li id="products" class="menuItem">
+                    <!-- Link para a página "Produtos" -->
+                    <a href="products.html">
+                        <!-- Botão com o texto "Produtos" -->
+                        <div class="button">
+                            <p>Produtos</p>
+                        </div>
+                    </a>
+                </li>
+                <!-- Item da página "Contato" (selecionado) -->
+                <li id="contact" class="menuItem">
+                    <!-- Link para a página atual (Contato) -->
+                    <a href="#">
+                        <!-- Botão com o texto "Contato" e classe "selected" para indicar seleção -->
+                        <div class="button selected">
+                            <p>Contato</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <!-- Div com a classe "contactBackground" -->
+        <div class="contactBackground">
+            <!-- Links para redes sociais com imagens -->
+            <a id="face" href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                <img src="https://logopng.com.br/logos/facebook-13.png" alt="facebook" width="50" height="50">
+            </a>
+            <a id="instagram" href="https://www.instagram.com/" target="_blank">
+                <img src="https://brunopalmahidroponia.com.br/wp-content/uploads/2020/07/logo-instagram-png-fundo-transparente.png" alt="instagram" width="50" height="50">
+            </a>
+            <a id="twitter" href="https://twitter.com/login?lang=pt" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/61w1Q5OxE2L.jpg" alt="twitter" width="50" height="50">
+            </a>
+        </div>
+        <!-- Div com a classe "contactBackground2" -->
+        <div class="contactBackground2"> </div>
+
+        <!-- Div para o formulário de contato -->
+        <div class="contact">
+            <!-- Título do formulário -->
+            <h2>Entre em contato</h2>
+            <!-- Formulário com campos para nome, e-mail, telefone, mensagem e botão de envio -->
+            <form class="form" action="contact.php">
+                <label>Nome: <input type="text" name="name" id="name" placeholder="Augusto Cesar"></label>
+                <label>Email: <input type="email" name="email" id="email" placeholder="algum@email.com"></label>
+                <label>Telefone: <input type="text" name="phone" id="phone" placeholder="41912345678"></label>
+                <label for="message">Mensagem:</label> <textarea id="message" rows="10" cols="20" placeholder="Sua mensagem aqui"></textarea>
+                <!-- Botão de envio do formulário -->
+                <input type="submit" class="submit" value="Enviar" onclick="handleSubmit">
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer id="footer">
+        <!-- Texto de direitos autorais -->
+        <p>
+            Copyright &copy; Rei do Micro-ondas
+        </p>
+    </footer>
+    <script>
+        // console.log(window.screen)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+/* Define a fonte padrão e remove sublinhado em links */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* Estilização global do corpo da página */
+body {
+  margin: 0px;
+  overflow-y: hidden; /* Esconde a barra de rolagem vertical */
+  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+  height: 100%;
+}
+
+/* Estilização do cabeçalho (header) */
+header {
+  background-color: #112;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  z-index: 2;
+}
+
+/* Estilização da lista de itens do menu */
+#menuItems {
+  display: flex;
+  list-style: none;
+  position: relative;
+  left: 1.4vw;
+  z-index: 2;
+}
+
+/* Estilização dos itens do menu */
+.menuItem {
+  border-right: black solid .5px;
+}
+
+/* Estilização do logotipo no menu */
+#logo a img {
+  width: 75px;
+  border-radius: 25%;
+}
+
+/* Estilização dos botões no menu */
+.button {
+  background-color: white;
+  height: 65%;
+  width: 25vw;
+  color: black;
+}
+
+/* Efeito de hover nos botões */
+.button:hover {
+  animation: btnHover 1s forwards;
+}
+
+/* Estilo para o botão selecionado */
+.selected {
+  background-color: #c4c4c4;
+}
+
+/* Estilização do texto nos botões */
+.button p {
+  text-align: center;
+  padding-top: 15px;
+}
+
+/* Animação de hover nos botões */
+@keyframes btnHover {
+  0% {
+      background-color: white;
+      height: 65%;
+      width: 25vw;
+  }
+  100% {
+      background-color: rgb(255, 87, 56);
+      height: 68%;
+      width: 30vw;
+      box-shadow: 0 0 10px rgb(255, 87, 56), 
+                  0 0 30px rgb(253, 78, 47), 
+                  0 0 50px rgb(255, 74, 43), 
+                  0 0 70px rgb(255, 56, 21);
+  }
+}
+
+/* Estilos de mídia para telas com largura menor ou igual a 550px */
+@media screen and (max-width: 550px) {
+  .button {
+      width: 20vw;
+  }
+  .button:hover {
+      animation: none; /* Remove a animação de hover */
+      background-color: rgb(255, 87, 56);
+  }
+}
+
+/* Estilos de mídia para telas com largura entre 550px e 680px */
+@media screen and (min-width: 550px) and (max-width: 680px) {
+  /* Redefine a animação de hover para telas específicas */
+  @keyframes btnHover {
+      0% {
+          background-color: white;
+          height: 65%;
+          width: 25vw;
+      }
+      100% {
+          background-color: rgb(255, 87, 56);
+          height: 68%;
+          width: 25.8vw;
+      }
+  }
+}
+
+/* Estilos de mídia para telas com altura menor ou igual a 765px */
+@media screen and (max-height: 765px) {
+  footer {
+      position: relative; /* Move o rodapé para cima */
+  }
+}
+
+/* Estilização do rodapé */
+footer {
+  bottom: 0;
+  width: 100vw;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Estilização do texto no rodapé */
+footer p {
+  font-size: larger;
+  text-align: center;
+  text-decoration: solid;
+  vertical-align: middle;
+  background-color: RGBA(100, 100, 100, 0.05);
+}

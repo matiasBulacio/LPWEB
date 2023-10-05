@@ -1,0 +1,155 @@
+/* Define a fonte padrão e remove sublinhado em links */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* Estilização da imagem */
+.image {
+  position: relative;
+  right: -55%; /* Move a imagem para a direita em relação ao contêiner pai */
+  top: -308px; /* Move a imagem para cima em relação ao contêiner pai */
+  width: 420px;
+  height: 420px;
+}
+
+/* Estilização do conteúdo principal */
+.content {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+  left: 10vw; /* Move o conteúdo para a esquerda em relação ao contêiner pai */
+  top: 10vh; /* Move o conteúdo para cima em relação ao contêiner pai */
+}
+
+/* Estilização do logotipo no conteúdo */
+.content #logoContent {
+  position: relative;
+  left: 25%; /* Move o logotipo para a esquerda em relação ao contêiner pai */
+  border-radius: 20px;
+}
+
+/* Estilização do texto do conteúdo */
+.contentText {
+  margin-top: 0px;
+  margin-right: 50%;
+  text-align: center;
+  padding-left: 40px;
+  padding-top: 0px;
+}
+
+/* Estilização do título do conteúdo */
+.contentTitle {
+  margin-top: 0px;
+  margin-right: 50%;
+  text-align: center;
+  padding-left: 60px;
+  padding-top: 25px;
+}
+
+/* Estilização do conteúdo principal */
+.main {
+  position: relative;
+  top: 14px;
+}
+
+/* Estilização do elemento de fundo com formato de meia lua */
+.halfCircle {
+  position: absolute;
+  bottom: -90px;
+  box-shadow: 0 0 10px #000040, 0 0 30px #0000a0, 0 0 70px orangered;
+  right: -100px;
+  width: 650px;
+  height: 650px;
+  background-color: #9191a1;
+  border-radius: 1000px 1000px 1000px 1000px;
+  z-index: -1;
+}
+
+/* Estilos de mídia para telas menores */
+@media screen and (max-height: 650px) {
+  /* Ajusta a posição do conteúdo e elementos relacionados para telas menores */
+  .content {
+      position: relative;
+      top: -20px;
+  }
+  .contentTitle {
+      position: relative;
+      top: -20px;
+  }
+  .contentText {
+      position: relative;
+      top: -20px;
+  }
+  .image {
+      position: relative;
+      top: -395px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  /* Ajusta a posição e estilos para telas menores */
+  .image {
+      position: relative;
+      right: -10%;
+      top: 0;
+      width: 420px;
+      height: 420px;
+  }
+  .content {
+      position: relative;
+      top: -10px;
+      background-color: rgb(222, 222, 222);
+      border-radius: 15px;
+      box-shadow: 0 0 10px #9191a1, 0 0 20px #9191a1, 0 0 40px #9191a1, 0 0 60px #fff;
+      height: 75vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      left: 5.5%;
+      width: 90vw;
+  }
+  .content #logoContent {
+      position: relative;
+      left: 37%;
+      border-radius: 20px;
+  }
+  .contentTitle {
+      position: relative;
+      top: -20px;
+      margin-top: 0px;
+      margin-right: 0%;
+      text-align: center;
+      padding-left: 0px;
+      padding-top: 25px;
+  }
+  .contentText {
+      position: relative;
+      top: -20px;
+      margin-top: 0px;
+      margin-right: 0%;
+      text-align: center;
+      padding-left: 0px;
+      padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  /* Ajusta a posição e estilos para telas ainda menores */
+  .content #logoContent {
+      left: 25%;
+  }
+  .contentText {
+      left: 15%;
+      height: 150px;
+      width: 75%;
+      position: relative;
+  }
+  .image {
+      width: 320px;
+      height: 320px;
+      top: 25px;
+  }
+}

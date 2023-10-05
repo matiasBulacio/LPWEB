@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres do documento -->
+    <meta charset="UTF-8">
+    <!-- Define as configurações de visualização em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links para os arquivos de estilo CSS -->
+    <link rel="stylesheet" href="styles/headerFooterStyles.css">
+    <link rel="stylesheet" href="styles/companyStyles.css">
+    <!-- Define o título da página exibido na guia do navegador -->
+    <title>Companhia</title>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header id="header">
+        <!-- Menu de navegação -->
+        <nav id="menu">
+            <!-- Lista de itens do menu -->
+            <ul id="menuItems">
+                <!-- Item do logotipo -->
+                <li id="logo" class="menuItem">
+                    <!-- Link para a página inicial -->
+                    <a href="index.html">
+                        <!-- Imagem do logotipo -->
+                        <img src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                <!-- Item da página "Empresa" (selecionado) -->
+                <li id="company" class="menuItem">
+                    <!-- Link para a página atual (Empresa) -->
+                    <a href="company.html">
+                        <!-- Botão com o texto "Empresa" e classe "selected" para indicar seleção -->
+                        <div class="button selected">
+                            <p>Empresa</p>
+                        </div>
+                    </a>
+                </li>
+                <!-- Item da página "Produtos" -->
+                <li id="products" class="menuItem">
+                    <!-- Link para a página "Produtos" -->
+                    <a href="products.html">
+                        <!-- Botão com o texto "Produtos" -->
+                        <div class="button">
+                            <p>Produtos</p>
+                        </div>
+                    </a>
+                </li>
+                <!-- Item da página "Contato" -->
+                <li id="contact" class="menuItem">
+                    <!-- Link para a página "Contato" -->
+                    <a href="contact.html">
+                        <!-- Botão com o texto "Contato" -->
+                        <div class="button">
+                            <p>Contato</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <!-- Seção de informações da empresa -->
+        <div id="vision" class="companyCard">
+            <!-- Título da seção -->
+            <h2>Visão</h2>
+            <!-- Texto da visão da empresa -->
+            <p>Ser a loja referência dentro do setor de vendas de microondas</p>
+        </div>
+
+        <div id="mission" class="companyCard">
+            <!-- Título da seção -->
+            <h2>Missão</h2>
+            <!-- Texto da missão da empresa -->
+            <p>Promover e vender os melhores microondas aos clientes, prestando suporte de qualidade e excelência</p>
+        </div>
+
+        <div id="companyValues" class="companyCard">
+            <!-- Título da seção -->
+            <h2>Valores</h2>
+            <!-- Lista de valores da empresa -->
+            <ul>
+                <li>Relacionamento com o cliente</li>
+                <li>Excelência na entrega e atendimento</li>
+                <li>Comprometimento na venda</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer id="footer">
+        <!-- Texto de direitos autorais -->
+        <p>
+            Copyright &copy; Rei do Micro-ondas
+        </p>
+    </footer>
+</body>
+</html>
