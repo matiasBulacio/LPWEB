@@ -8,8 +8,8 @@ section {
 
 /* Estiliza o elemento com classe "contactBackground" */
 .contactBackground {
-  height: 30vw; /* Define a altura em relação à largura da viewport */
-  width: 30vw; /* Define a largura em relação à largura da viewport */
+  height: 30rem; /* Define a altura em relação à largura da viewport */
+  width: 30rem; /* Define a largura em relação à largura da viewport */
 
   background-color: #7a7a85; /* Cor de fundo */
   box-shadow: 0 0 10px gray, /* Sombra interna */
@@ -98,7 +98,8 @@ section {
 
 /* Remove a borda de foco de inputs e textarea */
 input:focus,
-textarea:focus {
+textarea:focus
+select:focus {
   outline: 0;
   border-color: #016fff; /* Cor da borda ao receber foco */
 }
@@ -160,7 +161,7 @@ textarea {
     margin-top: 4.8vh; /* Margem superior aumentada */
   }
 
-  input {
+  input, select {
     height: 2.4vh; /* Altura reduzida */
     width: 25vw; /* Largura fixa */
     border-radius: 10px; /* Borda arredondada */
@@ -174,10 +175,10 @@ textarea {
 /* Estilos específicos para telas com largura máxima de 805px */
 @media screen and (max-width: 805px) {
   .contactBackground {
-    width: 250px; /* Largura fixa */
-    height: 250px; /* Altura fixa */
+    width: 400px; /* Largura fixa */
+    height: 400px; /* Altura fixa */
 
-    right: -60px; /* Posicionamento horizontal */
+    right: -220px; /* Posicionamento horizontal */
     top: 140px; /* Posicionamento vertical */
   }
 
@@ -197,7 +198,7 @@ textarea {
     text-align: center; /* Alinhamento central do texto */
   }
 
-  input {
+  input, select {
     width: 100%; /* Largura total para input */
   }
 
@@ -217,6 +218,7 @@ textarea {
 /* Estilos específicos para telas com largura mínima de 910px */
 @media screen and (min-width: 910px) {
   input,
+  select,
   textarea {
     margin-left: 15px; /* Margem esquerda aumentada */
     border-radius: 5%; /* Borda arredondada */

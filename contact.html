@@ -55,17 +55,35 @@
 			<a id="twitter" href="https://twitter.com/login?lang=pt" target="_blank">
 				<img src="https://m.media-amazon.com/images/I/61w1Q5OxE2L.jpg" alt="twitter" width="50" height="50">
 			</a>
+			<a id="whatsApp" href="https://www.whatsapp.com" target="_blank">
+				<img src="./assets/redes/wapp.jpg" alt="zap" width="50" height="50">
+			</a>
+			<a id="linkedin" href="https://www.linkedin.com" target="_blank">
+				<img src="./assets/redes/linkedin.png" alt="linkedin" width="50" height="50">
+			</a>
 		</div> <!-- Fim do fundo de contato com links para redes sociais -->
 
 		<div class="contactBackground2"> </div> <!-- Segundo fundo de contato (aparentemente vazio) -->
 
 		<div class="contact"> <!-- Seção de formulário de contato -->
 			<h1> Entre em contato </h1> <!-- Título da seção -->
-			<form class="form" action="contact.php"> <!-- Formulário de contato com ação definida como "contact.php" -->
+			<form class="form" method="POST" action="contact.php"> <!-- Formulário de contato com ação definida como "contact.php" -->
 				<label>Nome: <input type="text" name="name" id="name" placeholder="Augusto Cesar"></label> <!-- Campo de nome -->
 				<label>Email: <input type="email" name="email" id="email" placeholder="algum@email.com"></label> <!-- Campo de email -->
 				<label>Telefone: <input type="text" name="phone" id="phone" placeholder="41912345678"></label> <!-- Campo de telefone -->
-				<label for="message">Mensagem:</label> <textarea id="message" rows="10" cols="20"
+				<label>Motivação:  <!-- Campo motivo de contato -->
+					<select name="contactReason"> <!-- Selecionar motivação -->
+						<!-- Opções de motivação -->
+						<option value="purchase"> Compra </option>
+						<option value="refund"> Reembolso </option>
+						<option value="suport"> Suporte </option>
+						<option value="asks"> Duvidas </option>
+						<option value="technicalSupport"> Suporte técnico </option>
+					</select>
+				</label>
+				
+
+				<label for="message">Mensagem:</label> <textarea id="message" rows="5" cols="20"
 					placeholder="sua mensagem aqui"></textarea> <!-- Campo de mensagem -->
 				<input type="submit" class="submit" value="Enviar" onclick="handleSubmit"> <!-- Botão de envio -->
 			</form> <!-- Fim do formulário de contato -->
