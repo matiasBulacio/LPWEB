@@ -1,46 +1,93 @@
+/* Define que o corpo (body) da página não deve ter rolagem vertical (overflow) */
 body {
   overflow: hidden;
 }
 
+/* Estiliza as seções (sections) na página */
 section {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  color: white;
-  width: 95vw;
-  right: -2vw;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  width: 95vw; /* Largura de 95% da largura da viewport */
+
+  display: flex; /* Usa flexbox para organizar o conteúdo */
+  justify-content: space-between; /* Alinha os elementos com espaço entre eles */
+
+  position: relative; /* Define uma posição relativa para elementos filhos */
+  right: -2vw; /* Move a seção para a esquerda em 2% da largura da viewport */
+
+  overflow-y: hidden; /* Esconde a rolagem vertical */
+  overflow-x: hidden; /* Esconde a rolagem horizontal */
 }
 
+/* Estiliza os cartões da empresa (companyCard) */
 .companyCard {
-  background-color: rgb(116, 116, 136);
-  width: 30vw;
-  height: 70vh;
-  text-align: center;
-  color: white;
-  box-shadow: 0 0 10px cadetblue,
-    0 0 30px cadetblue,
-    0 0 50px cadetblue;
-} 
+  height: 40rem; /* Altura do cartão */
+  width: 22rem; /* Largura do cartão */
 
-@media screen and (max-width: 610px){
+  background-color: rgb(116, 116, 136); /* Cor de fundo */
+  box-shadow: 0 0 10px cadetblue, /* Sombra interna */
+  0 0 30px cadetblue, /* Sombra intermediária */
+  0 0 50px cadetblue; /* Sombra externa */
+  color: white; /* Cor do texto */
+
+  text-align: center; /* Alinha o texto ao centro */
+
+  overflow-y: hidden; /* Esconde a rolagem vertical dentro do cartão */
+}
+
+/* Estiliza o id history*/
+#history {
+  overflow-y: auto;
+}
+
+/* Estiliza os parágrafos dentro de elementos com ID "history" */
+#history p {
+  width: 90%; /* Largura de 90% do contêiner pai */
+
+  font-size: 1rem; /* Tamanho da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
+
+  position: relative; /* Define uma posição relativa para os parágrafos */
+}
+
+/* Define estilos específicos para telas com largura máxima de 610px */
+@media screen and (max-width: 610px) {
   section {
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
+    height: 46rem; /* Altura maior para seções em telas pequenas */
+
+    flex-direction: column; /* Muda a direção dos elementos para coluna */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    justify-content: space-between; /* Alinha os elementos com espaço entre eles */
+
+    overflow-y: auto; /* Habilita a rolagem vertical */
   }
 
   .companyCard {
-    width: 75vw;
-    height: 20vh;
-    margin-top: 25px;
-    margin-left: 10.5vw;
+    height: 20vh; /* Altura em relação à altura da viewport */
+    width: 75vw; /* Largura em relação à largura da viewport */
+
+    margin-top: 25px; /* Margem superior */
+    margin-left: 10.5vw; /* Margem esquerda */
   }
 }
 
+/* Define estilos específicos para telas com largura mínima de 610px */
+@media screen and (min-width: 610px) {
+  .companyInfo {
+    width: 95vw; /* Largura de 95% da largura da viewport */
+
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    justify-content: space-between; /* Alinha os elementos com espaço entre eles */
+
+    position: relative; /* Define uma posição relativa para elementos filhos */
+    right: -2vw; /* Move a seção para a esquerda em 2% da largura da viewport */
+    
+    overflow-y: hidden; /* Esconde a rolagem vertical */
+    overflow-x: hidden; /* Esconde a rolagem horizontal */
+  }
+}
+
+/* Define estilos específicos para telas com altura máxima de 580px */
 @media screen and (max-height: 580px) {
   section {
-    height: 60vh;
+    height: 60vh; /* Altura em relação à altura da viewport */
   }
 }
