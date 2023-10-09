@@ -127,20 +127,20 @@ textarea {
 /* Animação do botão de envio quando hover */
 .submit:hover {
   animation: submitAnimation 1s forwards; /* Animação CSS ao passar o mouse */
+}
 
-  @keyframes submitAnimation {
-    0% {
-      width: 50%;
-    }
+@keyframes submitAnimation {
+  0% {
+    width: 50%;
+  }
 
-    100% {
-      width: 56%; /* Largura aumenta com cor e sombra */
-      background-color: rgb(255, 87, 56); /* Cor de fundo alterada */
-      box-shadow: 0 0 10px red, /* Sombra */
-        0 0 30px red, /* Sombra */
-        0 0 50px red, /* Sombra */
-        0 0 70px red; /* Sombra */
-    }
+  100% {
+    width: 56%; /* Largura aumenta com cor e sombra */
+    background-color: rgb(255, 87, 56); /* Cor de fundo alterada */
+    box-shadow: 0 0 10px red, /* Sombra */
+      0 0 30px red, /* Sombra */
+      0 0 50px red, /* Sombra */
+      0 0 70px red; /* Sombra */
   }
 }
 
