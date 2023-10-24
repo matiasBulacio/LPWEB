@@ -1,5 +1,5 @@
 <?php
-class Email {
+class Email implements IModel {
     private int $id;
     private int $id_cliente;
     private string $email;
@@ -34,6 +34,12 @@ class Email {
         $this->email = $email;
     }
 
+    public function update() {
 
+    }
+
+    public function delete() {
+
+    }
 
 }
