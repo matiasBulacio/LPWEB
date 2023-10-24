@@ -5,13 +5,13 @@ $user = 'root';
 $pass = '123456';
 $db = 'world';
 
-$conn = mysqli_connect($server, $user, $pass, $db);
-
-if (!$conn) {
-    die('err, ');
+try {
+    $conn = new PDO("myshql:host=$server;dbname=$db", $user, $pass);
+    echo "conectado a $server $db Com sucesso usando pdo";
+} catch (PDOException $e) {
+    $message = "Drivers disponiveis: " . implode(',', PDO::getAvailableDrivers());
+    $message .= "\n -Erro: " . $e->getMessage();
+    throw new Exception($message);
 }
-
-echo 'conectado';
-mysqli_close($conn);
 
 ?>
