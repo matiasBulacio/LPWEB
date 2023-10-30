@@ -1,3 +1,2 @@
 # LPWEB
-Add pag home
-Add comentarios nos codigos de cada pagina 
+Linguagem de Programação III - Curso Ciência Computação UNIANDRADE
