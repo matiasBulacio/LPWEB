@@ -1,7 +1,8 @@
 <?php
 
-class Cliente {
-    
+class Cliente
+{
+
     private int $id;
     private string $nome_cliente;
     private string $data_nascimento;
@@ -10,36 +11,43 @@ class Cliente {
     private string $genero;
     private string $origem;
 
-    
-    public function __construct() {
 
+    public function __construct()
+    {
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-	function getNomeCliente() { 
- 		return $this->nome_cliente; 
-	} 
+    function getNomeCliente()
+    {
+        return $this->nome_cliente;
+    }
 
-    function getDataNascimnto() { 
-        return $this->data_nascimento; 
-   } 
+    function getDataNascimnto()
+    {
+        return $this->data_nascimento;
+    }
 
-   function DataCadastro() { 
-    return $this->data_cadastro; 
-} 
+    function DataCadastro()
+    {
+        return $this->data_cadastro;
+    }
 
-function getCpfCnpj() { 
-    return $this->cpf_cnpj; 
-} 
+    function getCpfCnpj()
+    {
+        return $this->cpf_cnpj;
+    }
 
-function getGenero() { 
-    return $this->genero; 
-} 
+    function getGenero()
+    {
+        return $this->genero;
+    }
 
-function getOrigem() { 
-    return $this->origem; 
-} 
+    function getOrigem()
+    {
+        return $this->origem;
+    }
 }

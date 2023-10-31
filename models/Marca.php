@@ -1,36 +1,40 @@
 <?php
-class Filial implements IModel{
+class Filial implements IModel
+{
     private int $id;
     private string $desc;
 
-    public function __construct($id, $desc) {
+    public function __construct($id, $desc)
+    {
         $this->id = $id;
         $this->$desc = $desc;
     }
 
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getDesc() {
+    public function getDesc()
+    {
         return $this->desc;
     }
 
-    public function setId($id) {
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    public function setDesc($desc) {
+    public function setDesc($desc)
+    {
         $this->desc = $desc;
     }
 
-    public function update() {
-
+    public function update()
+    {
     }
 
-    public function delete() {
-
+    public function delete()
+    {
     }
-
-
 }
