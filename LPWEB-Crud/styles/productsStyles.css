@@ -1,0 +1,114 @@
+/* Estiliza o elemento <section> */
+section {
+  height: 78vh; /* Define a altura como 78% da viewport */
+
+  display: flex; /* Utiliza flexbox para organizar o conteúdo */
+  flex-direction: column; /* Organiza os filhos em coluna */
+}
+
+/* Estiliza elementos com classe "title" */
+.title {
+  overflow-x: hidden; /* Esconde a rolagem horizontal */
+}
+
+/* Estiliza elementos com classe "background" */
+.background {
+  height: 500px; /* Define a altura */
+  width: 500px; /* Define a largura */
+
+  background-color: #9095aa; /* Cor de fundo */
+  box-shadow: 0 0 10px #000040, /* Sombra interna */
+    0 0 30px #0000a0; /* Sombra intermediária */
+
+  display: flex; /* Utiliza flexbox para organizar o conteúdo */
+  flex-direction: column; /* Organiza os filhos em coluna */
+
+  position: absolute; /* Posicionamento absoluto */
+  right: -200px; /* Distância à direita */
+
+  border-radius: 100%; /* Borda arredondada */
+
+  z-index: -1; /* Camada de sobreposição z-index */
+}
+
+/* Estiliza elementos com classe "background2" */
+.background2 {
+  height: 500px; /* Define a altura */
+  width: 500px; /* Define a largura */
+
+  background-color: #000020; /* Cor de fundo */
+  box-shadow: 0 0 10px #000040, /* Sombra interna */
+    0 0 30px #0000a0; /* Sombra intermediária */
+
+  margin: 400px 0px 0px -200px; /* Margem e posicionamento */
+  position: absolute; /* Posicionamento absoluto */
+
+  border-radius: 100%; /* Borda arredondada */
+
+  z-index: 0; /* Camada de sobreposição z-index */
+}
+
+/* Estiliza o elemento <h1> */
+h1 {
+  text-align: center; /* Alinhamento de texto ao centro */
+  text-decoration: solid; /* Decoração de texto sólida */
+  vertical-align: middle; /* Alinhamento vertical no centro */
+
+  position: relative; /* Posicionamento relativo */
+}
+
+/* Estiliza elementos com ID "productList" */
+#productList {
+  height: 60vh; /* Define a altura como 60% da viewport */
+  width: 98vw; /* Define a largura como 98% da viewport */
+
+  background-color: rgba(236, 236, 236, 0.1); /* Cor de fundo com transparência */
+
+  position: relative; /* Posicionamento relativo */
+  top: 1vh; /* Distância superior */
+  left: 1vw; /* Distância à esquerda */
+
+  border-radius: 5%; /* Borda arredondada */
+  border-top-right-radius: 0%; /* Borda arredondada apenas no canto superior direito */
+
+  overflow-y: scroll; /* Adiciona rolagem vertical quando necessário */
+}
+
+/* Estiliza elementos com classe "products" */
+.products {
+  list-style: none; /* Remove marcadores de lista */
+
+  display: flex; /* Utiliza flexbox para organizar os produtos */
+  flex-wrap: wrap; /* Organiza os produtos em várias linhas */
+  justify-content: space-between; /* Distribui o espaço entre os produtos */
+
+  position: relative; /* Posicionamento relativo */
+  margin-right: 20px; /* Margem direita */
+}
+
+/* Estiliza itens de lista dentro de "products" */
+.products li {
+  color: white; /* Cor do texto */
+  background-color: rgba(0, 0, 0, 1); /* Cor de fundo com transparência */
+  box-shadow: 0 0 10px black, /* Sombra interna */
+    0 0 30px black; /* Sombra intermediária */
+
+  margin-right: 10px; /* Margem direita */
+  margin-top: 10px; /* Margem superior */
+  text-align: center; /* Alinhamento de texto ao centro */
+
+  border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estiliza imagens dentro dos itens de lista */
+.products li img {
+  height: 200px; /* Altura da imagem */
+  width: 200px; /* Largura da imagem */
+}
+
+/* Estilos para telas com largura máxima de 850px */
+@media screen and (max-width: 850px) {
+  .background2 {
+    background-color: #6b6b77; /* Cor de fundo alterada */
+  }
+}
