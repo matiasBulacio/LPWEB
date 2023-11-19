@@ -1,16 +1,16 @@
 <?php
 
-class Produto implements IModel {
+class Produto {
     private int $id;
     private string $descProduto;
-    private int $idModelo;
+    private $idModelo;
     private float $capacidade;
     private float $vlrSugerido;
     private float $vlrCusto;
     private float $voltagem;
     private float $idCor;
 
-    public function __construct(int $id, string $descProduto, int $idModelo, float $capacidade, float $vlrSugerido, float $vlrCusto, float $voltagem, float $idCor) {
+    public function __construct(int $id, string $descProduto, $idModelo, float $capacidade, float $vlrSugerido, float $vlrCusto, float $voltagem, float $idCor) {
         $this->id = $id;
         $this->descProduto = $descProduto;
         $this->idModelo = $idModelo;
