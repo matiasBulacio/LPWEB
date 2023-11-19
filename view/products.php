@@ -1,3 +1,32 @@
+<?php
+	
+	require_once("../controller/connection.php");
+	require_once("../models/Produto.php");
+
+	$sql = "SELECT * FROM produto;";
+	$stmt = $conn->prepare($sql);
+	$products = array();
+	try {
+		$stmt->execute();
+		$result = $stmt->fetchAll();
+		// echo 'result:'.implode(',',$result[2]);
+		if ($result) {
+			foreach ($result as &$prod) {
+				$product = new Produto($prod[0], $prod[1], $prod[2], $prod[3], $prod[4], $prod[5], $prod[6], $prod[7]);
+				array_push($products, $product);
+				
+			}
+			echo $products[0]->getDescProduto();//'result:'.implode(',',$products[0]);
+		} else {
+			echo "Produto não encontrado";
+			return null;
+		}
+	} catch (PDOException $e) {
+		echo "Erro ao buscar Produto: " . $e->getMessage();
+		return null;
+	}
+?>
+
 <!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
 <html lang="pt-br"> <!-- Define o idioma da página como português brasileiro -->
 
@@ -6,8 +35,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para dispositivos móveis -->
 	<title>Produtos</title> <!-- Define o título da página exibido na aba do navegador -->
 
-	<link rel="stylesheet" href="styles/headerFooterStyles.css"> <!-- Inclui um arquivo CSS externo para estilos do cabeçalho e rodapé -->
-	<link rel="stylesheet" href="styles/productsStyles.css"> <!-- Inclui um arquivo CSS externo para estilos específicos da página de produtos -->
+	<link rel="stylesheet" href="../styles/headerFooterStyles.css"> <!-- Inclui um arquivo CSS externo para estilos do cabeçalho e rodapé -->
+	<link rel="stylesheet" href="../styles/productsStyles.css"> <!-- Inclui um arquivo CSS externo para estilos específicos da página de produtos -->
 </head>
 
 <body>
@@ -15,12 +44,12 @@
 		<nav id="menu"> <!-- Início da barra de navegação -->
 			<ul id="menuItems"> <!-- Início da lista de itens de menu -->
 				<li id="logo" class="menuItem"> <!-- Item do menu: Logo -->
-					<a href="index.html"> <!-- Link para a página inicial -->
-						<img src="./assets/logo.jpg" alt="logo"> <!-- Imagem do logotipo -->
+					<a href="../index.html"> <!-- Link para a página inicial -->
+						<img src="../assets/logo.jpg" alt="logo"> <!-- Imagem do logotipo -->
 					</a>
 				</li>
 				<li id="company" class="menuItem"> <!-- Item do menu: Empresa -->
-					<a href="company.html"> <!-- Link para a página de informações sobre a empresa -->
+					<a href="./company.html"> <!-- Link para a página de informações sobre a empresa -->
 						<div class="button">
 							<p>Empresa</p> <!-- Texto do botão -->
 						</div>
@@ -34,7 +63,7 @@
 					</a>
 				</li>
 				<li id="contact" class="menuItem"> <!-- Item do menu: Contato -->
-					<a href="contact.html"> <!-- Link para a página de contato -->
+					<a href="./contact.html"> <!-- Link para a página de contato -->
 						<div class="button">
 							<p>Contato</p> <!-- Texto do botão -->
 						</div>
@@ -54,42 +83,22 @@
 
 		<div id="productList"> <!-- Lista de produtos -->
 			<ul class="products"> <!-- Início da lista de produtos -->
+				<?php
 
-				<!-- Produto 1 -->
-				<li class="product"> <!-- Item de produto 1 -->
-					<!-- Imagem do Produto 1 -->
-					<img src="./assets/produtos/produto1.png" alt="Produto 1">
+					foreach ($products as $product) {
+						echo "<li class = \"product\">";
+						echo "<img src=\"../assets/produtos/produto1.png\" alt=\"Produto 1\">";
 
-					<!-- Título do Produto 1 -->
-					<h2>MS37R 1</h2>
+						echo "<h2>".$product->getDescProduto()."</h2>";
 
-					<!-- Descrição do Produto 1 -->
-					<p>Micro-ondas de Bancada Electrolux MS37R é o que faltava para equipar sua cozinha...</p>
+						echo "<p>"."Voltagem: 110V"."</p>";
+						echo "<p>"."Litragem: 27L"."</p>";
+						echo "<p>"."Preço: "."R$".$product->getVlrSugerido()."</p>";
 
-					<!-- Informações adicionais do Produto 1 -->
-					<p>Voltagem: 110V</p>
-					<p>Litragem: 27L</p>
-					<p>Preço: R$ 759,00</p>
-				</li> <!-- Fim do Produto 1 -->
+						echo "</li>";
+					}
+				?>
 
-				<!-- Produto 2 -->
-				<li> <!-- Item de produto 2 -->
-					<!-- Imagem do Produto 2 -->
-					<img src="./assets/produtos/produto2.jpg" alt="Produto 2">
-
-					<!-- Título do Produto 2 -->
-					<h2>MRAS22</h2>
-
-					<!-- Descrição do Produto 2 -->
-					<p>O Micro-ondas 20L Midea veio para ser seu novo aliado na cozinha...</p>
-
-					<!-- Informações adicionais do Produto 2 -->
-					<p>Voltagem: 220V</p>
-					<p>Litragem: 20L</p>
-					<p>Preço: R$ 449,50</p>
-				</li> <!-- Fim do Produto 2 -->
-
-				<!-- Mais produtos podem ser adicionados aqui com a mesma estrutura -->
 
 			</ul> <!-- Fim da lista de produtos -->
 		</div> <!-- Fim da lista de produtos -->

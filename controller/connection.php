@@ -1,8 +1,8 @@
 <?php
 $server = 'localhost';
 $user = 'root';
-$pass = '';
-$db = 'bd_aulas';
+$pass = '20042002';
+$db = 'rmo';
 $conn;
 
 
