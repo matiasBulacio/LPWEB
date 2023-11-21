@@ -15,17 +15,17 @@ $id = $_POST['id'];
 $sql = "UPDATE produto SET 
                 desc_produto = :desc_produto,
                 id_modelo = :id_modelo,
-                capacidade = :capacidade,
+                capacidade_modelo = :capacidade,
                 vlr_sugerido = :vlr_sugerido,
                 vlr_custo = :vlr_custo,
                 voltagem = :voltagem,
                 id_cor = :id_cor
-                WHERE id = :id";
+                WHERE id_produto = :id";
 
-$stmt = $this->pdo->prepare($sql);
+$stmt = $conn->prepare($sql);
 
 $stmt->bindValue(':desc_produto', $descProduto);
-$stmt->bindValue(':id_modelo', $idModelo);
+$stmt->bindValue(':id_modelo', null);
 $stmt->bindValue(':capacidade', $capacidade);
 $stmt->bindValue(':vlr_sugerido', $vlrSugerido);
 $stmt->bindValue(':vlr_custo', $vlrCusto);

@@ -11,12 +11,12 @@
 		$result = $stmt->fetchAll();
 		// echo 'result:'.implode(',',$result[2]);
 		if ($result) {
+			
 			foreach ($result as &$prod) {
-				$product = new Produto($prod[0], $prod[1], $prod[2], $prod[3], $prod[4], $prod[5], $prod[6], $prod[7]);
+				$product = new Produto($prod['id_produto'], $prod['desc_produto'], $prod['id_modelo'], $prod['capacidade_modelo'], $prod['vlr_sugerido'], $prod['vlr_custo'], $prod['voltagem'], $prod['id_cor']);
 				array_push($products, $product);
 				
 			}
-			echo $products[0]->getDescProduto();//'result:'.implode(',',$products[0]);
 		} else {
 			echo "Produto não encontrado";
 			return null;
@@ -93,7 +93,7 @@
 
 						echo "<p>"."Voltagem: 110V"."</p>";
 						echo "<p>"."Litragem: 27L"."</p>";
-						echo "<p>"."Preço: "."R$".$product->getVlrSugerido()."</p>";
+						echo "<p>"."Preço: "."R$".str_replace('.', ',', $product->getVlrSugerido())."</p>";
 
 						echo "</li>";
 					}
