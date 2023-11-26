@@ -4,7 +4,6 @@
 require_once("../../controller/connection.php");
 require_once("../../models/Produto.php");
 $id = $_GET['id'];
-
 $sql = "SELECT * FROM produto WHERE id_produto = :id";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(':id', $id);
@@ -13,10 +12,9 @@ $product;
 try {
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
     if ($result) {
         // Criar e retornar um objeto Produto com os dados do banco de dados
-        $product = new Produto($result['id_produto'], $result['desc_produto'], $result['id_modelo'], $result['capacidade'], $result['vlr_sugerido'], $result['vlr_custo'], $result['voltagem'], $result['id_cor']);
+        $product = new Produto($result['id_produto'], $result['desc_produto'], $result['id_modelo'], $result['capacidade_modelo'], $result['vlr_sugerido'], $result['vlr_custo'], $result['voltagem'], $result['id_cor']);
     } else {
         echo "Produto não encontrado";
         return null;

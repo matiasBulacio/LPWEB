@@ -11,7 +11,7 @@ $voltagem = $_POST['voltagem'];
 $idCor = $_POST['idCor'];
 
 try {
-    $sql = "INSERT INTO produto (desc_produto, id_modelo, capacidade, vlr_sugerido, vlr_custo, voltagem, id_cor) VALUES (?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO produto (desc_produto, id_modelo, capacidade_modelo, vlr_sugerido, vlr_custo, voltagem, id_cor) VALUES (?,?,?,?,?,?,?);";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array($descProduto, $idModelo, $capacidade, $vlrSugerido, $vlrCusto, $voltagem, $idCor));
     echo "OK";
