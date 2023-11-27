@@ -59,6 +59,12 @@ header {
   animation: btnHover 1s forwards; /* Animação ao passar o mouse */
 }
 
+#cart {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px
+}
+
 /* Animação do botão do menu */
 @keyframes btnHover {
   0% {

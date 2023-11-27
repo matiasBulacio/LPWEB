@@ -1,0 +1,85 @@
+#cartModal {
+    width: 300px;
+    height: 7in;
+    position: absolute;
+    background-color: rgba(199, 97, 1, 0.9);
+    right: 50px;
+    top: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    align-items: center;
+    text-align: center;
+
+    border-radius: 10%;
+
+    box-shadow: 0 0 10px purple, /* Sombra interna */
+      0 0 30px purple; /* Sombra intermediária */
+}
+
+/* Estiliza elementos com classe "products" */
+.productList {
+    list-style: none; /* Remove marcadores de lista */
+  
+    display: flex; /* Utiliza flexbox para organizar os produtos */
+    flex-wrap: wrap; /* Organiza os produtos em várias linhas */
+    
+    justify-content: space-between; /* Distribui o espaço entre os produtos */
+  
+    position: relative; /* Posicionamento relativo */
+    margin-right: 20px; /* Margem direita */
+  }
+
+/* Estiliza itens de lista dentro de "products" */
+.productList li {
+    align-items: center;
+    
+    color: white; /* Cor do texto */
+    width: 100%;
+    background-color: rgb(207, 93, 0); /* Cor de fundo com transparência */
+    box-shadow: 0 0 5px red, /* Sombra interna */
+      0 0 15px red; /* Sombra intermediária */
+  
+    margin-right: 10px; /* Margem direita */
+    margin-top: 10px; /* Margem superior */
+    text-align: center; /* Alinhamento de texto ao centro */
+  
+    border-radius: 10px; /* Borda arredondada */
+
+  }
+  
+  /* Estiliza imagens dentro dos itens de lista */
+  .productList li img {
+    height: 100px; /* Altura da imagem */
+    width: 100px; /* Largura da imagem */
+  }
+
+  #finish {
+    background-color: white;
+    width: 90%;
+    position: relative;
+    margin-left: 7%;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+  #finish:hover {
+    background-color: gainsboro;
+  }
+
+  #finalPrice {
+    border-radius: 50%;
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+    position: relative;
+    background-color: RGBA(255,255,255, 0.5);
+
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  #finalPrice p {
+   position: relative;
+   padding-top: 13px;
+  }

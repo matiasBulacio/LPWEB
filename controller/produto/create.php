@@ -3,7 +3,7 @@ require_once("../connection.php");
 
 $id = $_POST['id'];
 $descProduto = $_POST['descProduto'];
-$idModelo = null;//$_POST['idModelo'];
+$idModelo = $_POST['idModelo'];
 $capacidade = $_POST['capacidade'];
 $vlrSugerido = $_POST['vlrSugerido'];
 $vlrCusto = $_POST['vlrCusto'];

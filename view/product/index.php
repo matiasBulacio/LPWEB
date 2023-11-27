@@ -11,7 +11,7 @@
 		$result = $stmt->fetchAll();
 		// echo 'result:'.implode(',',$result[2]);
 			foreach ($result as $prod) {
-				$product = new Produto($prod['id_produto'], $prod['desc_produto'], $prod['id_modelo'], $prod['capacidade_modelo'], $prod['vlr_sugerido'], $prod['vlr_custo'], $prod['voltagem'], $prod['id_cor']);
+				$product = new Produto($prod['id'], $prod['desc_produto'], $prod['id_modelo'], $prod['capacidade'], $prod['vlr_sugerido'], $prod['vlr_custo'], $prod['voltagem'], $prod['id_cor'], $prod['image']);
 				array_push($products, $product);
 				
 			}

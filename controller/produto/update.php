@@ -15,17 +15,17 @@ $id = $_POST['id'];
 $sql = "UPDATE produto SET 
                 desc_produto = :desc_produto,
                 id_modelo = :id_modelo,
-                capacidade_modelo = :capacidade,
+                capacidade = :capacidade,
                 vlr_sugerido = :vlr_sugerido,
                 vlr_custo = :vlr_custo,
                 voltagem = :voltagem,
                 id_cor = :id_cor
-                WHERE id_produto = :id";
+                WHERE id = :id";
 
 $stmt = $conn->prepare($sql);
 
 $stmt->bindValue(':desc_produto', $descProduto);
-$stmt->bindValue(':id_modelo', null);
+$stmt->bindValue(':id_modelo', $idModelo);
 $stmt->bindValue(':capacidade', $capacidade);
 $stmt->bindValue(':vlr_sugerido', $vlrSugerido);
 $stmt->bindValue(':vlr_custo', $vlrCusto);
@@ -35,6 +35,7 @@ $stmt->bindValue(':id', $id);
 
 try {
     $stmt->execute();
+    echo "<a href=\"../../view/product\"> Voltar </a>";
     echo "Produto atualizado com sucesso!";
 } catch (PDOException $e) {
     echo "Erro ao atualizar produto: " . $e->getMessage();
