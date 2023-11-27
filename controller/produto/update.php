@@ -22,7 +22,7 @@ $sql = "UPDATE produto SET
                 id_cor = :id_cor
                 WHERE id = :id";
 
-$stmt = $this->pdo->prepare($sql);
+$stmt = $conn->prepare($sql);
 
 $stmt->bindValue(':desc_produto', $descProduto);
 $stmt->bindValue(':id_modelo', $idModelo);
@@ -35,6 +35,7 @@ $stmt->bindValue(':id', $id);
 
 try {
     $stmt->execute();
+    echo "<a href=\"../../view/product\"> Voltar </a>";
     echo "Produto atualizado com sucesso!";
 } catch (PDOException $e) {
     echo "Erro ao atualizar produto: " . $e->getMessage();

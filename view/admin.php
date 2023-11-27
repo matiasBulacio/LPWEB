@@ -1,3 +1,7 @@
+<?php
+  require_once('../controller/session.php');
+  echo implode(',', $_SESSION['shop_list']);
+?>
 <!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
 <html lang="en"> <!-- Define o idioma da página como inglês -->
 
@@ -17,12 +21,12 @@
     <nav id="menu"> <!-- Início da barra de navegação -->
       <ul id="menuItems"> <!-- Início da lista de itens de menu -->
         <li id="logo" class="menuItem"> <!-- Item do menu: Logo -->
-          <a href="../index.html"> <!-- Link para a página inicial -->
+          <a href="../index.php"> <!-- Link para a página inicial -->
             <img src="../assets/logo.jpg" alt="logo"> <!-- Imagem do logotipo -->
           </a>
         </li>
         <li id="company" class="menuItem"> <!-- Item do menu: Empresa -->
-          <a href="company.html"> <!-- Link para a página de informações sobre a empresa -->
+          <a href="company.php"> <!-- Link para a página de informações sobre a empresa -->
             <div class="button selected"> <!-- Botão destacado para a página atual -->
               <p>Empresa</p> <!-- Texto do botão -->
             </div>
@@ -36,7 +40,7 @@
           </a>
         </li>
         <li id="contact" class="menuItem"> <!-- Item do menu: Contato -->
-          <a href="./contact.html"> <!-- Link para a página de contato -->
+          <a href="./contact.php"> <!-- Link para a página de contato -->
             <div class="button"> <!-- Botão -->
               <p>Contato</p> <!-- Texto do botão -->
             </div>

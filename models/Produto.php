@@ -4,13 +4,14 @@ class Produto {
     private int $id;
     private string $descProduto;
     private $idModelo;
-    private float $capacidade;
+    private string $capacidade;
     private float $vlrSugerido;
     private float $vlrCusto;
-    private float $voltagem;
+    private string $voltagem;
     private float $idCor;
+    private string $image;
 
-    public function __construct(int $id, string $descProduto, $idModelo, float $capacidade, float $vlrSugerido, float $vlrCusto, float $voltagem, float $idCor) {
+    public function __construct(int $id, string $descProduto, $idModelo, string $capacidade, float $vlrSugerido, float $vlrCusto, string $voltagem, float $idCor, string $image) {
         $this->id = $id;
         $this->descProduto = $descProduto;
         $this->idModelo = $idModelo;
@@ -19,6 +20,7 @@ class Produto {
         $this->vlrCusto = $vlrCusto;
         $this->voltagem = $voltagem;
         $this->idCor = $idCor;
+        $this->image = $image;
     }
 
     public function getId() {
@@ -53,6 +55,10 @@ class Produto {
         return $this->idCor;
     }
 
+    public function getImage() {
+        return $this->image;
+    }
+
     public function setId($id) {
         $this->id = $id;
     }
@@ -84,6 +90,11 @@ class Produto {
     public function setIdCor($idCor) {
         $this->idCor = $idCor;
     }
+
+    public function setImage($image) {
+        $this->image = $image;
+    }
+
 
 
     public function update() {
