@@ -1,7 +1,7 @@
 <?php
 $server = 'localhost';
 $user = 'root';
-$pass = '20042002';
+$pass = '';
 $db = 'rmo';
 $conn;
 

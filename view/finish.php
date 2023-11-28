@@ -84,29 +84,29 @@
 			<h1> Finalizar Compra </h1> <!-- Título da seção -->
 			Entre com seus dados para confirmação
 			<form class="form" method="POST" action="../controller/purchase.php"> <!-- Formulário de contato com ação definida como "contact.php" -->
-				<label>Nome: <input type="text" name="name" id="name" value="<?php echo $_SESSION['name'] ? $_SESSION['name'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>data_nascimento: <input type="date" name="datNasc" id="datNasc" value="<?php echo $_SESSION['datNasc'] ? $_SESSION['datNasc'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>CPF/CNPJOTO: <input type="text" name="cpfcnpj" id="cpfcnpj" value="<?php echo $_SESSION['cpfcnpj'] ? $_SESSION['cpfcnpj'] : '' ?>""></label> <!-- Campo de nome -->
+				<label>Nome: <input type="text" name="name" id="name" value="<?php if (isset($_SESSION['name'])) echo $_SESSION['name'] ? $_SESSION['name'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>data_nascimento: <input type="date" name="datNasc" id="datNasc" value="<?php if (isset($_SESSION['datNasc'])) echo $_SESSION['datNasc'] ? $_SESSION['datNasc'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>CPF/CNPJ: <input type="text" name="cpfcnpj" id="cpfcnpj" value="<?php if (isset($_SESSION['cpfcnpj'])) echo $_SESSION['cpfcnpj'] ? $_SESSION['cpfcnpj'] : '' ?>""></label> <!-- Campo de nome -->
 				<label>Genero:  <!-- Campo motivo de contato -->
 					<select name="gender"> <!-- Selecionar motivação -->
 						<!-- Opções de motivação -->
-						<option value="M" <?php echo $_SESSION['gender'] == 'M' ? 'selected="selected"' : '' ?>> Masculino </option>
-						<option value="F" <?php echo $_SESSION['gender'] == 'F' ? 'selected="selected"' : '' ?>> Feminino </option>
+						<option value="M" <?php if (isset($_SESSION['gender'])) echo $_SESSION['gender'] == 'M' ? 'selected="selected"' : '' ?>> Masculino </option>
+						<option value="F" <?php if (isset($_SESSION['gender'])) echo $_SESSION['gender'] == 'F' ? 'selected="selected"' : '' ?>> Feminino </option>
 
 					</select>
 				</label>
-				<label>Origem: <input type="text" name="origem" id="origem" value="<?php echo $_SESSION['origem'] ? $_SESSION['origem'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Email: <input type="email" name="email" id="email" value="<?php echo $_SESSION['email'] ? $_SESSION['email'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Origem: <input type="text" name="origem" id="origem" value="<?php if (isset($_SESSION['origem'])) echo $_SESSION['origem'] ? $_SESSION['origem'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Email: <input type="email" name="email" id="email" value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email'] ? $_SESSION['email'] : '' ?>"></label> <!-- Campo de nome -->
 				<hr>
-				<label>Telefone: <input type="text" name="phone" id="phone" value="<?php echo $_SESSION['phone'] ? $_SESSION['phone'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Telefone: <input type="text" name="phone" id="phone" value="<?php if (isset($_SESSION['phone'])) echo $_SESSION['phone'] ? $_SESSION['phone'] : '' ?>"></label> <!-- Campo de nome -->
 				<hr>
-				<label>Rua (logradouro): <input type="text" name="street" id="street" value="<?php echo $_SESSION['street'] ? $_SESSION['street'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Numero: <input type="text" name="number" id="number" value="<?php echo $_SESSION['number'] ? $_SESSION['number'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Complemento: <input type="text" name="complement" id="complement" value="<?php echo $_SESSION['complement'] ? $_SESSION['complement'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>CEP: <input type="text" name="cep" id="cep" value="<?php echo $_SESSION['cep'] ? $_SESSION['cep'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Bairro: <input type="text" name="bairro" id="bairro" value="<?php echo $_SESSION['bairro'] ? $_SESSION['bairro'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Cidade: <input type="text" name="city" id="city" value="<?php echo $_SESSION['city'] ? $_SESSION['city'] : '' ?>"></label> <!-- Campo de nome -->
-				<label>Estado: <input type="text" name="uf" id="uf" value="<?php echo $_SESSION['uf'] ? $_SESSION['uf'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Rua (logradouro): <input type="text" name="street" id="street" value="<?php if (isset($_SESSION['street'])) echo $_SESSION['street'] ? $_SESSION['street'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Numero: <input type="text" name="number" id="number" value="<?php if (isset($_SESSION['number'])) echo $_SESSION['number'] ? $_SESSION['number'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Complemento: <input type="text" name="complement" id="complement" value="<?php if (isset($_SESSION['complement'])) echo $_SESSION['complement'] ? $_SESSION['complement'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>CEP: <input type="text" name="cep" id="cep" value="<?php if (isset($_SESSION['cep'])) echo $_SESSION['cep'] ? $_SESSION['cep'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Bairro: <input type="text" name="bairro" id="bairro" value="<?php if (isset($_SESSION['bairro'])) echo $_SESSION['bairro'] ? $_SESSION['bairro'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Cidade: <input type="text" name="city" id="city" value="<?php if (isset($_SESSION['city'])) echo $_SESSION['city'] ? $_SESSION['city'] : '' ?>"></label> <!-- Campo de nome -->
+				<label>Estado: <input type="text" name="uf" id="uf" value="<?php if (isset($_SESSION['uf'])) echo $_SESSION['uf'] ? $_SESSION['uf'] : '' ?>"></label> <!-- Campo de nome -->
 				<hr>
 				<input type="text" name="products" id="products" readonly value="<?php
 					echo implode(',', $_SESSION['shop_list']);
@@ -121,7 +121,7 @@
 		require_once('./modals/cart.php');
 	?>
 
-	<footer id="footer"> <!-- Início da seção de rodapé -->
+	<footer id="footer" style=""> <!-- Início da seção de rodapé -->
 		<p> <!-- Parágrafo de texto -->
 			Copyright &copy; Rei do Micro-ondas <!-- Informação de direitos autorais -->
 		</p>

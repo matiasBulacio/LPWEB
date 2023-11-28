@@ -73,10 +73,10 @@ require_once("../models/Produto.php");
 				<img src="https://m.media-amazon.com/images/I/61w1Q5OxE2L.jpg" alt="twitter" width="50" height="50">
 			</a>
 			<a id="whatsApp" href="https://www.whatsapp.com" target="_blank">
-				<img src="./assets/redes/wapp.jpg" alt="zap" width="50" height="50">
+				<img src="../assets/redes/wapp.jpg" alt="zap" width="50" height="50">
 			</a>
 			<a id="linkedin" href="https://www.linkedin.com" target="_blank">
-				<img src="./assets/redes/linkedin.png" alt="linkedin" width="50" height="50">
+				<img src="../assets/redes/linkedin.png" alt="linkedin" width="50" height="50">
 			</a>
 		</div> <!-- Fim do fundo de contato com links para redes sociais -->
 

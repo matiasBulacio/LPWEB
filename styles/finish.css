@@ -8,7 +8,7 @@ section {
 
 /* Estiliza o elemento com classe "contactBackground" */
 .contactBackground {
-  height: 30rem; /* Define a altura em relação à largura da viewport */
+  height: 40rem; /* Define a altura em relação à largura da viewport */
   width: 30rem; /* Define a largura em relação à largura da viewport */
 
   background-color: #7a7a85; /* Cor de fundo */
@@ -118,7 +118,8 @@ textarea {
 
   position: relative; /* Posicionamento relativo */
   left: -25%;
-  margin-top: 15px; /* Margem superior */
+  top: -25px;
+  /* margin-top: 15px; Margem superior */
 
   border: 2px solid white; /* Borda sólida */
   border-radius: 10px; /* Borda arredondada */
