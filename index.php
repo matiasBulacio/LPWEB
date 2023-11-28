@@ -53,16 +53,7 @@
                         </div>
                     </a>
                 </li>
-                <li id="cart" class="menuItem"> <!-- Item do menu: Contato -->
-					<?php
-						$cartOpened = isset($_GET['cart']) && $_GET['cart'] == 1 ? 'cart=0' : 'cart=1';
-						echo "<a href=\"./index.php?".$cartOpened."\">"// <!-- Link para a página de contato -->
-					?>
-						<div class="">
-							<img src="./assets/icons/compras.png" alt="Carrinho de Compras" width="50">
-						</div>
-					</a>
-				</li>
+               
 
             </ul> <!-- Fim da lista de itens de menu -->
         </nav> <!-- Fim da barra de navegação -->
@@ -85,9 +76,7 @@
     <div class="halfCircle"></div> <!-- Uma forma geométrica na página -->
 
     <!-- MODALS -->
-	<?php 
-		require_once('./view/modals/cart.php');
-	?>
+
 
     <footer id="footer"> <!-- Início do rodapé -->
         <p>Copyright © Rei do Micro-ondas</p> <!-- Informação de direitos autorais -->

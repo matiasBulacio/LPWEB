@@ -105,7 +105,7 @@ footer {
   text-align: center; /* Alinhamento do texto ao centro */
   
   position: absolute; /* Posicionamento absoluto */
-  bottom: 0; /* Alinhamento na parte inferior */
+  bottom: 15px; /* Alinhamento na parte inferior */
   vertical-align: middle; /* Alinhamento vertical no centro */
 }
 

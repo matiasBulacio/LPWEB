@@ -58,7 +58,7 @@
                 $clientId = $clientId['id'];
             }
 
-            echo $clientId;
+           // echo $clientId;
 
             $existingMail = 'SELECT id FROM email WHERE id_cliente = ? LIMIT 1;';
             $newMail = 'INSERT INTO email (id_cliente, email, tipo) VALUES (?, ?, ?);';
@@ -77,13 +77,13 @@
                 $mailId = $mailId['id'];
             }
 
-            echo $mailId;
+           // echo $mailId;
 
             $phoneSQL = 'SELECT numero FROM fone WHERE numero = ?';
             $stmt = $conn->prepare($phoneSQL);
             $stmt->execute(array($phone));
             $resultPhone = $stmt->fetch();
-            if (!$resultPhone && !$resultPhone['numero'] == $phone) {
+             if($resultPhone) if (!$resultPhone && !$resultPhone['numero'] == $phone) {
                 $newPhone = 'INSERT INTO fone (id_cliente, numero, tipo, contato) VALUES (?, ?, ?, ?);';
                 $stmt = $conn->prepare($newPhone);
                 $stmt->execute(array($clientId, $phone, 'pessoal', $name));
@@ -107,7 +107,7 @@
                 $enderecoId = $enderecoId['id'];
             }
 
-            echo $enderecoId;
+            //echo $enderecoId;
 
             $venda = 'INSERT INTO venda (id_cliente, id_vendedor, data, status, prc_desconto) VALUES (?,?,?,?,?)';
             $sellerId = mt_rand(1,20);

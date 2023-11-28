@@ -1,4 +1,6 @@
-
+drop database if exists rmo;
+create database if not exists rmo;
+use rmo;
 DELIMITER $$
 --
 -- Procedimentos
@@ -490,26 +492,21 @@ CREATE TABLE `produto` (
 -- Extraindo dados da tabela `produto`
 --
 
-INSERT INTO `produto` (`id`, `id_cor`, `id_modelo`, `desc_produto`, `capacidade`, `vlr_sugerido`, `vlr_custo`, `voltagem`) VALUES
-(1, 3, 12, 'Produto', 20, 732.35, 803.7, '110 V'),
-(2, 3, 13, 'Produto', 20, 1210.17, 636.93, '220 V'),
-(3, 1, 9, 'Produto', 20, 1249.57, 657.67, '220 V'),
-(4, 4, 14, 'Produto', 15, 1477.36, 777.56, '220 V'),
-(5, 3, 9, 'Produto', 10, 1609.98, 847.36, '110 V'),
-(6, 1, 9, 'Produto', 10, 748.57, 995.84, '220 V'),
-(7, 3, 13, 'Produto', 15, 1267.59, 667.15, '110 V'),
-(8, 1, 14, 'Produto', 15, 826.98, 989.48, '220 V'),
-(9, 3, 14, 'Produto', 10, 672.98, 924.25, '220 V'),
-(10, 3, 8, 'Produto', 15, 1474.42, 776.01, '220 V'),
-(11, 4, 12, 'Produto', 20, 1259.49, 662.89, '110 V'),
-(12, 1, 16, 'micoondas', 20, 550, 550, '220'),
-(13, 3, 16, 'micoondas', 20, 550, 550, '220'),
-(14, 2, 17, 'micoondas', 30, 500, 500, '220'),
-(15, 3, 18, 'micoondas', 20, 600, 600, '220'),
-(16, 3, 21, 'micoondas', 30, 600, 600, '220'),
-(17, 1, 19, 'micoondas', 30, 430, 430, '220'),
-(18, 3, 19, 'micoondas', 30, 420, 420, '220'),
-(19, 1, 20, 'micoondas', 20, 333.33, 333.33, '220');
+INSERT INTO `produto` (`id`, `id_cor`, `id_modelo`, `desc_produto`, `capacidade`, `vlr_sugerido`, `vlr_custo`, `voltagem`, `image`) VALUES
+(1, 3, 12, 'Microondas sony', 20, 732.35, 803.7, '110 V', 'https://images.tcdn.com.br/img/img_prod/789576/micro_ondas_30l_panasonic_nn_gt68lbrun_preto_dm2t128688n_1328400_1_39a15e44434b09e0d182a50223d9573f.png'),
+(2, 3, 13, 'Microondas Philips', 20, 1210.17, 636.93, '220 V', 'https://credimoveis.agilecdn.com.br/micro-ondas-lg-ms3095lr-30l-800w-easyclean-prata-nobre-220v_875008.jpg'),
+(3, 1, 9, 'Microondas Oster black', 20, 1249.57, 657.67, '220 V', 'https://avsstands.com.br/site/wp-content/uploads/2013/06/microondas-18-litros-220V.png'),
+(4, 4, 14, 'Microondas Oster platinum', 15, 1477.36, 777.56, '220 V', 'https://versia.com.br/wp-content/uploads/2022/01/produto-microondas-de-embutir-crissair-classic-inox-33-litros-60cm-cfm-90-g3-PhotoRoom.png-PhotoRoom-768x768.png'),
+(5, 3, 9, 'Microondas electrolux white', 10, 1609.98, 847.36, '110 V', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTum9uNsAulNZirU6tQi5V7n6cQFP10uHWyZg&usqp=CAU'),
+(6, 1, 9, 'Microondas electrolux black', 10, 748.57, 995.84, '220 V', 'https://almoveis.com.br/wp-content/uploads/2022/11/1020101-1.png'),
+(7, 3, 13, 'Microondas electrolux blue', 15, 1267.59, 667.15, '110 V', 'https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/194776'),
+(8, 1, 14, 'Microondas philips white', 15, 826.98, 989.48, '220 V', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEp6lr3K3xd_c_YgEYOzDFMTqAssI4laed6w&usqp=CAU'),
+(9, 3, 14, 'Microondas sony dark', 10, 672.98, 924.25, '220 V', 'https://loja.mueller.ind.br/media/catalog/product//m/i/micro-ondas_frente_1.png'),
+(10, 3, 8, 'Microondas sony white', 15, 1474.42, 776.01, '220 V', 'https://tvlar.vtexassets.com/arquivos/ids/19906463-800-auto?v=637903870169700000&width=800&height=auto&aspect=true'),
+(11, 4, 12, 'Microondas sony green', 20, 1259.49, 662.89, '110 V', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXP7r1WbHL9I7mfWaYFcj6EeJIecKFiaJjyA&usqp=CAU'),
+(12, 1, 16, 'Microondas sony platinum', 20, 550, 550, '220', 'https://w7.pngwing.com/pngs/255/596/png-transparent-microwave-oven-convection-microwave-home-appliance-barbecue-grill-microwave-electronics-kitchen-appliance-cooking.png'),
+(13, 3, 16, 'Microondas ', 20, 550, 550, '220', 'https://png.pngtree.com/png-clipart/20231001/original/pngtree-3d-microwave-isolated-object-with-high-quality-render-png-image_13025059.png'),
+(14, 2, 17, 'micoondas', 30, 500, 500, '220', 'https://images.tcdn.com.br/img/img_prod/1109919/forno_micro_ondas_31l_220v_mod_mtrs42_outlet_1915_1_2cc5b1619a56028b7bf5fb3c727cbfcd.png');
 
 --
 -- Acionadores `produto`
